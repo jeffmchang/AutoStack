@@ -2,8 +2,8 @@
 
 Team:
 
-* Person 1 - Which microservice?
-* Person 2 - Which microservice?
+* Sofia Uribe - Service Microservice
+* Jeff Chang - Sales Microservice
 
 ## Design
 

@@ -13,19 +13,19 @@ function VehicleForm(props){
         }
     };
 
-    const [name, setName] = useState([]);
+    const [name, setName] = useState('');
     handleNameChange = (event) => {
         const value = event.target.value;
         setName(value)
     }
 
-    const [pictureUrl, setPictureUrl] = useState([]);
+    const [pictureUrl, setPictureUrl] = useState('');
     handlePictureUrlChange = (event) => {
         const value = event.target.value;
         setPictureUrl(value)
     }
 
-    const[manufacturer, setManufacturer] = useState([]);
+    const[manufacturer, setManufacturer] = useState('');
     handleManufacturerChange = (event) => {
         const value = event.targer.value;
         setManufacturer(value);
@@ -35,12 +35,11 @@ function VehicleForm(props){
         event.preventDefault();
 
         const data = {};
-
         data.name = name;
         data.picture_url = pictureUrl
         data.manufacturer = manufacturer
 
-        const VehicleUrl = 'http://localhost:8100/api/models/';
+        const vehicleUrl = 'http://localhost:8100/api/models/';
         const fetchConfig = {
             method: 'post',
             body: JSON.stringify(data),
@@ -49,7 +48,7 @@ function VehicleForm(props){
             }
         };
 
-        const response = await fetch(VehicleUrl, fetchConfig);
+        const response = await fetch(vehicleUrl, fetchConfig);
 
         if (response.ok) {
             const newVehicle = await response.json()
@@ -100,7 +99,7 @@ function VehicleForm(props){
                 <label htmlFor="picture_url">Picture Url</label>
               </div>
 
-              {/* id */}
+              {/* manufacturer */}
               <div className="mb-3">
                 <select
                 value={manufacturer}
