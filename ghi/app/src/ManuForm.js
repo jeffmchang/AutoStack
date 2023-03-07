@@ -1,23 +1,19 @@
 import React, { useEffect, useState } from "react";
 
 function ManuForm() {
+    // field-------------------------------------------------
     const [manufacturer, setManufacturer] = useState('');
-
     const handleManufacturerChange = (event) => {
         const value = event.target.value;
         setManufacturer(value);
     }
-    const fetchData = async () => {
-        const response = await fetch('http://localhost:8100/api/manufacturers/');
-        const data = await response.json();
-        setManufacturer(data.manufacturer);
-    }
 
+    // submit------------------------------------------------
     const handleSubmit = async (event) => {
         event.preventDefault();
         const data = {};
-
-        data.manufacturer = manufacturer;
+        console.log(data)
+        data.name = manufacturer;
 
         const manuUrl = 'http://localhost:8100/api/manufacturers/';
         const fetchConfig = {
@@ -34,18 +30,15 @@ function ManuForm() {
             setManufacturer('');
         }
     }
-    useEffect(() => {
-        fetchData();
-    }, []);
 
     return (
         <div className="row">
             <div className="offset-3 col-6">
                 <div className="shadow p-4 mt-4">
-                    <h1>Create a new hat</h1>
+                    <h1>Create a New Manufacturer</h1>
                     <form
                         onSubmit={handleSubmit}
-                        id="create-conf-form">
+                        id="create-manufacturer-form">
                         <div className="form-floating mb-3">
                             <input
                                 value={manufacturer}
@@ -57,7 +50,7 @@ function ManuForm() {
                             <label htmlFor="manufacturer">Manufacturer</label>
                         </div>
                         <button
-                            type="button" className="btn btn-primary">Create</button>
+                            className="btn btn-primary">Create</button>
                     </form>
                 </div>
             </div>

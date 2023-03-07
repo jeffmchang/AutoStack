@@ -6,6 +6,7 @@ import ManuList from './ManuList';
 import ModelList from './ModelList';
 import ModelForm from './ModelForm';
 import AutoMobileForm from './AutoMobileForm';
+import AutoList from './AutoMobileList';
 
 function App() {
   return (
@@ -19,12 +20,12 @@ function App() {
             <Route path="new" element={<ManuForm />} />
           </Route>
           <Route path='models'>
-            <Route path="" element= {<ModelList />} />
+            <Route path="" element={<ModelList />} />
             <Route path="new" element={<ModelForm />} />
           </Route>
 
           <Route path='automobiles'>
-            {/* <Route path="" element= {<AutoList />} /> */}
+            <Route path="" element={<AutoList />} />
             <Route path="new" element={<AutoMobileForm />} />
           </Route>
 
