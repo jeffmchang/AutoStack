@@ -11,7 +11,7 @@ function Nav() {
           <NavLink className="nav-link text-white dropdown-toggle" to="manufacturers" type="button" data-bs-toggle="dropdown" aria-expanded="false">Manufacturers</NavLink>
           <ul className="dropdown-menu">
             <li><NavLink className="dropdown-item" to="manufacturers">List of Manufacturers</NavLink></li>
-            <li><NavLink className="dropdown-item" to="manufacturers/new">Create A Manufacturer</NavLink></li>
+            <li><NavLink className="dropdown-item" to="manufacturers/new">Create a Manufacturer</NavLink></li>
           </ul>
         </div>
 
@@ -26,10 +26,10 @@ function Nav() {
 
         {/* automobile dropdown.................................................... */}
         <div className="dropdown">
-          <NavLink className="nav-link text-white dropdown-toggle" to="automobiles" type="button" data-bs-toggle="dropdown" aria-expanded="false">Vehicle Models</NavLink>
+          <NavLink className="nav-link text-white dropdown-toggle" to="automobiles" type="button" data-bs-toggle="dropdown" aria-expanded="false">Automobiles</NavLink>
           <ul className="dropdown-menu">
-            <li><NavLink className="dropdown-item" to="automobiles">List of Models</NavLink></li>
-            <li><NavLink className="dropdown-item" to="automobiles/new">Create a Model</NavLink></li>
+            <li><NavLink className="dropdown-item" to="automobiles">List of Automobiles</NavLink></li>
+            <li><NavLink className="dropdown-item" to="automobiles/new">Create a Automobile</NavLink></li>
           </ul>
         </div>
 
