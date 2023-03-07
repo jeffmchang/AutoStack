@@ -3,8 +3,8 @@ import MainPage from './MainPage';
 import Nav from './Nav';
 import ManuForm from './ManuForm';
 import ManuList from './ManuList';
-import VehicleList from './VehicleList';
-import VehicleForm from './VehicleForm';
+import ModelList from './ModelList';
+import ModelForm from './ModelForm';
 import AutoMobileForm from './AutoMobileForm';
 
 function App() {
@@ -18,9 +18,9 @@ function App() {
             <Route path="" element={<ManuList />} />
             <Route path="new" element={<ManuForm />} />
           </Route>
-          <Route path='vehicles'>
-            <Route path="" element= {<VehicleList />} />
-            <Route path="new" element={<VehicleForm />} />
+          <Route path='models'>
+            <Route path="" element= {<ModelList />} />
+            <Route path="new" element={<ModelForm />} />
           </Route>
 
           <Route path='automobiles'>

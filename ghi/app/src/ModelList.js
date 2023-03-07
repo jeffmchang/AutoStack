@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-function VehicleList( ){
+function ModelList( ){
     const[models, setModels] = useState([]);
     const fetchData = async () => {
         const modelUrl = `http://localhost:8100/api/models/`;
@@ -18,6 +18,7 @@ function VehicleList( ){
 
     return (
         <div className="my-5 container">
+            <h1 className="text-dark fw-bold text-center my-3">Vehicle Models</h1>
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -44,4 +45,4 @@ function VehicleList( ){
     );
 }
 
-export default VehicleList;
+export default ModelList;

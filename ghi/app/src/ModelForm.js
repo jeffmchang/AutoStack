@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-function VehicleForm(){
+function ModelForm(){
 
     //drop down............................................
     const [manufacturers, setManufacturers] = useState([]);
@@ -43,7 +43,7 @@ function VehicleForm(){
         data.picture_url = pictureUrl;
         data.manufacturer_id = manufacturerId;
 
-        const vehicleUrl = 'http://localhost:8100/api/models/';
+        const modelUrl = 'http://localhost:8100/api/models/';
         const fetchConfig = {
             method: 'post',
             body: JSON.stringify(data),
@@ -52,7 +52,7 @@ function VehicleForm(){
             }
         };
 
-        const response = await fetch(vehicleUrl, fetchConfig);
+        const response = await fetch(modelUrl, fetchConfig);
 
         if (response.ok) {
             setName('');
@@ -70,7 +70,7 @@ function VehicleForm(){
         <div className="row">
         <div className="offset-3 col-6">
           <div className="shadow p-4 mt-4">
-            <h1>Create A New Vehicle</h1>
+            <h1>Create A New Vehicle Model</h1>
             <form onSubmit={handleSubmit} id="create-vehicle-form">
 
               {/* name.......................................... */}
@@ -128,4 +128,4 @@ function VehicleForm(){
     );
 }
 
-export default VehicleForm;
+export default ModelForm;
