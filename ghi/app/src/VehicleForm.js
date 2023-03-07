@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
-function VehicleForm(props){
+function VehicleForm(){
+
+    //drop down............................................
     const [manufacturers, setManufacturers] = useState([]);
     const fetchData = async () => {
         const url = 'http://localhost:8100/api/manufacturers/';
@@ -13,31 +15,33 @@ function VehicleForm(props){
         }
     };
 
+    //other form fields......................................
     const [name, setName] = useState('');
-    handleNameChange = (event) => {
+    const handleNameChange = (event) => {
         const value = event.target.value;
-        setName(value)
-    }
+        setName(value);
+    };
 
     const [pictureUrl, setPictureUrl] = useState('');
-    handlePictureUrlChange = (event) => {
+    const handlePictureUrlChange = (event) => {
         const value = event.target.value;
-        setPictureUrl(value)
-    }
+        setPictureUrl(value);
+    };
 
-    const[manufacturer, setManufacturer] = useState('');
-    handleManufacturerChange = (event) => {
-        const value = event.targer.value;
-        setManufacturer(value);
-    }
+    const[manufacturerId, setManufacturerId] = useState('');
+    const handleManufacturerChange = (event) => {
+        const value = event.target.value;
+        setManufacturerId(value);
+    };
 
+    // handle submit.....................................
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         const data = {};
         data.name = name;
-        data.picture_url = pictureUrl
-        data.manufacturer = manufacturer
+        data.picture_url = pictureUrl;
+        data.manufacturer_id = manufacturerId;
 
         const vehicleUrl = 'http://localhost:8100/api/models/';
         const fetchConfig = {
@@ -51,19 +55,17 @@ function VehicleForm(props){
         const response = await fetch(vehicleUrl, fetchConfig);
 
         if (response.ok) {
-            const newVehicle = await response.json()
-
-
-        setName('');
-        setPictureUrl('');
-        setManufacturer('');
+            setName('');
+            setPictureUrl('');
+            setManufacturerId('');
         }
-    }
+    };
 
     useEffect(() => {
         fetchData();
     }, []);
 
+    // return.....................................................
     return(
         <div className="row">
         <div className="offset-3 col-6">
@@ -71,7 +73,7 @@ function VehicleForm(props){
             <h1>Create A New Vehicle</h1>
             <form onSubmit={handleSubmit} id="create-vehicle-form">
 
-              {/* name */}
+              {/* name.......................................... */}
               <div className="form-floating mb-3">
                 <input
                 value={name}
@@ -85,33 +87,33 @@ function VehicleForm(props){
                 <label htmlFor="name">Vehicle Model Name</label>
               </div>
 
-              {/* picture */}
+              {/* picture......................................... */}
               <div className="form-floating mb-3">
                 <input
                 value={pictureUrl}
                 onChange={handlePictureUrlChange}
-                placeholder="Room count"
+                placeholder="Picture URL"
                 required type="text"
                 name="picture_url"
                 id="picture_url"
                 className="form-control"
                 />
-                <label htmlFor="picture_url">Picture Url</label>
+                <label htmlFor="picture_url">Picture URL</label>
               </div>
 
-              {/* manufacturer */}
+              {/* manufacturer......................................... */}
               <div className="mb-3">
                 <select
-                value={manufacturer}
+                value={manufacturerId}
                 onChange={handleManufacturerChange}
-                required name="state"
-                id="state"
+                required name="manufacturer"
+                id="manufacturer"
                 className="form-select"
                 >
                   <option value="">Choose a Manufacturer</option>
                   {manufacturers.map(manufacturer => {
                     return (
-                      <option key={manufacturer.id} value={manufacturer.name}>
+                      <option key={manufacturer.id} value={manufacturer.id}>
                         {manufacturer.name}
                       </option>
                     );

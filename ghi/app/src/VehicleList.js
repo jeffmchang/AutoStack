@@ -1,6 +1,21 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 function VehicleList( ){
+    const[models, setModels] = useState([]);
+    const fetchData = async () => {
+        const modelUrl = `http://localhost:8100/api/models/`;
+        const response = await fetch(modelUrl);
+
+        if (response.ok) {
+            const data = await response.json();
+            setModels(data.models)
+        }
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
     return (
         <div className="my-5 container">
             <table className="table table-striped">
@@ -12,13 +27,13 @@ function VehicleList( ){
                     </tr>
                 </thead>
                 <tbody>
-                    {vehicles.map((vehicle, id) => {
+                    {models.map((model, id) => {
                     return(
                         <tr key={id}>
-                            <td>{ vehicle.name }</td>
-                            <td>{ vehicle.manufacturer }</td>
+                            <td>{ model.name }</td>
+                            <td>{ model.manufacturer.name }</td>
                             <td>
-                                <img src= { vehicle.picture_url } />
+                                <img src= { model.picture_url } />
                             </td>
                         </tr>
                     );
@@ -28,3 +43,5 @@ function VehicleList( ){
         </div>
     );
 }
+
+export default VehicleList;
