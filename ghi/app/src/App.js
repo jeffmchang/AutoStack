@@ -36,6 +36,14 @@ function App() {
             <Route path="new" element={<AutoMobileForm />} />
           </Route>
 
+
+
+
+
+
+
+
+
           <Route path='technicians'>
             <Route path="new" element={<TechnicianForm />} />
 
