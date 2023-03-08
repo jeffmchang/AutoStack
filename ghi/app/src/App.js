@@ -10,6 +10,7 @@ import AutoList from './Inventory/AutoMobileList';
 import TechnicianForm from './Service/TechnicianForm';
 import SalesPersonForm from './Sales/SalesPersonForm';
 import CustomerForm from './Sales/CustomerForm';
+import SalesList from './Sales/SalesList';
 
 
 function App() {
@@ -49,6 +50,8 @@ function App() {
             <Route path="new" element={<CustomerForm />} />
 
           </Route>
+
+          <Route path='sales' element={<SalesList />} />
 
         </Routes>
       </div>

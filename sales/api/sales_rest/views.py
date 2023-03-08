@@ -48,6 +48,7 @@ class SaleEncoder(ModelEncoder):
     def get_extra_data(self, o):
         return {
             "salesperson": o.salesperson.name,
+            "employee_number": o.salesperson.employee_number,
             "customer": o.customer.name,
             'vin': o.vin.vin,
         }
@@ -100,7 +101,7 @@ def api_list_sales(request):
     sale = Sale.objects.create(**content)
     return JsonResponse(
         sale,
-        encoder=[SaleEncoder],
+        encoder=SaleEncoder,
         safe=False,
     )
 
