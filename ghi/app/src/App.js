@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import Nav from './Nav';
-import ManuForm from './ManuForm';
-import ManuList from './ManuList';
-import ModelList from './ModelList';
-import ModelForm from './ModelForm';
-import AutoMobileForm from './AutoMobileForm';
-import AutoList from './AutoMobileList';
-import TechnicianForm from './TechnicianForm';
+import ManuForm from './Inventory/ManuForm';
+import ManuList from './Inventory/ManuList';
+import ModelList from './Inventory/ModelList';
+import ModelForm from './Inventory/ModelForm';
+import AutoMobileForm from './Inventory/AutoMobileForm';
+import AutoList from './Inventory/AutoMobileList';
+import TechnicianForm from './Service/TechnicianForm';
 
 function App() {
   return (
