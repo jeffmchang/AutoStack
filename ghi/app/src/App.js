@@ -7,6 +7,7 @@ import ModelList from './ModelList';
 import ModelForm from './ModelForm';
 import AutoMobileForm from './AutoMobileForm';
 import AutoList from './AutoMobileList';
+import TechnicianForm from './TechnicianForm';
 
 function App() {
   return (
@@ -15,10 +16,12 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<MainPage />} />
+
           <Route path="manufacturers">
             <Route path="" element={<ManuList />} />
             <Route path="new" element={<ManuForm />} />
           </Route>
+
           <Route path='models'>
             <Route path="" element={<ModelList />} />
             <Route path="new" element={<ModelForm />} />
@@ -27,6 +30,11 @@ function App() {
           <Route path='automobiles'>
             <Route path="" element={<AutoList />} />
             <Route path="new" element={<AutoMobileForm />} />
+          </Route>
+
+          <Route path='technicians'>
+            <Route path="new" element={<TechnicianForm />} />
+
           </Route>
 
         </Routes>
