@@ -40,6 +40,16 @@ function Nav() {
               </ul>
             </div>
 
+            {/* Sales------------------------------------------------------- */}
+            <div className="dropdown">
+              <Link className="nav-link text-white dropdown-toggle" to="automobiles" type="button" data-bs-toggle="dropdown" aria-expanded="false">Sales</Link>
+              <ul className="dropdown-menu">
+                <li><Link className="dropdown-item" to="salesperson/new">Add New Salesperson</Link></li>
+                <li><Link className="dropdown-item" to="customers/new">Add New Customer</Link></li>
+                <li><Link className="dropdown-item" to="sales">All Sales</Link></li>
+              </ul>
+            </div>
+
           </ul>
         </div>
       </div>
