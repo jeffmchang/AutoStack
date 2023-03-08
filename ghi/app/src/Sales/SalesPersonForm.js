@@ -2,13 +2,13 @@ import React, { useState } from "react";
 
 function SalesPersonForm() {
     // field-------------------------------------------------
-    const [salesName, setSalesName] = useState('');
+    const [name, setSalesName] = useState('');
     const handleSalesNameChange = (event) => {
         const value = event.target.value;
         setSalesName(value);
     }
 
-    const [employeeId, setemployeeId] = useState('');
+    const [employee_number, setemployeeId] = useState('');
     const handleEmployeeIdChange = (event) => {
         const value = event.target.value;
         setemployeeId(value);
@@ -20,10 +20,10 @@ function SalesPersonForm() {
         const data = {};
         console.log(data)
 
-        data.salesName = salesName;
-        data.employeeId = employeeId;
+        data.name = name;
+        data.employee_number = employee_number;
 
-        const salePersonUrl = 'http://localhost:8090/api/salesperson/';
+        const salePersonUrl = 'http://localhost:8090/api/salespeople/';
         const fetchConfig = {
             method: 'POST',
             body: JSON.stringify(data),
@@ -50,7 +50,7 @@ function SalesPersonForm() {
                         id="create-salesperson-form">
                         <div className="form-floating mb-3">
                             <input
-                                value={salesName}
+                                value={name}
                                 onChange={handleSalesNameChange}
                                 placeholder="Name"
                                 required type="text"
@@ -60,7 +60,7 @@ function SalesPersonForm() {
                         </div>
                         <div className="form-floating mb-3">
                             <input
-                                value={employeeId}
+                                value={employee_number}
                                 onChange={handleEmployeeIdChange}
                                 placeholder="Employee ID#"
                                 required type="text"
