@@ -8,6 +8,7 @@ import ModelForm from './ModelForm';
 import AutoMobileForm from './AutoMobileForm';
 import AutoList from './AutoMobileList';
 import TechnicianForm from './TechnicianForm';
+import SalesPersonForm from './SalesPersonForm';
 
 function App() {
   return (
@@ -34,6 +35,11 @@ function App() {
 
           <Route path='technicians'>
             <Route path="new" element={<TechnicianForm />} />
+
+          </Route>
+
+          <Route path='salesperson'>
+            <Route path="new" element={<SalesPersonForm />} />
 
           </Route>
 
