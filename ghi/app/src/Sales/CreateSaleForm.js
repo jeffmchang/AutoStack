@@ -75,8 +75,8 @@ function CreateSaleForm() {
 
 
     // filter out automobiles-----------------------------------------
-    const filteredAutos = automobiles.filter(auto => {
-        return !sales.some(sale => sale.vin === auto.vin);
+    const filteredAutos = automobiles && automobiles.filter(auto => {
+        return sales && !sales.some(sale => sale.vin === auto.vin);
     });
 
 
@@ -102,9 +102,9 @@ function CreateSaleForm() {
 
         const response = await fetch(saleUrl, fetchConfig);
         if (response.ok) {
-            setAutomobiles('');
-            setSalespeople('');
-            setCustomers('');
+            setAutomobiles([]);
+            setSalespeople([]);
+            setCustomers([]);
             setSalesPrice('');
         }
     }
@@ -125,7 +125,7 @@ function CreateSaleForm() {
                             className="form-select"
                             >
                             <option value="">Choose a Automobile</option>
-                            {filteredAutos
+                            {filteredAutos && filteredAutos
                                 .map((auto, idx) => (
                                 <option key={idx} value={auto.vin}>
                                     {auto.vin}

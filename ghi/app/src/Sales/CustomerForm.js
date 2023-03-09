@@ -71,6 +71,7 @@ function CustomerForm() {
                                 value={address}
                                 onChange={handleAddressChange}
                                 placeholder="Address"
+                                maxLength={30}
                                 required type="text"
                                 name='address' id="address"
                                 className="form-control" />
@@ -82,6 +83,7 @@ function CustomerForm() {
                                 onChange={handlePhoneNumberChange}
                                 placeholder="Phone Number"
                                 required type="text"
+                                maxLength={10}
                                 name='phone_number' id="phone_number"
                                 className="form-control" />
                             <label htmlFor="phone_number">Phone Number</label>
