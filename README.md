@@ -5,21 +5,9 @@ Team:
 * Sofia Uribe - Service Microservice
 * Jeff Chang - Sales Microservice
 
-## Design
 
-## Service microservice
+# Getting Started:
 
-Explain your models and integration with the inventory
-microservice, here.
-
-## Sales microservice
-
-Explain your models and integration with the inventory
-microservice, here.
-
-## Getting Started:
-
----
 
 1. Make sure your Docker app is running
 2. Clone this repository to your local computer (please replace “the repo” with the actual repository link)
@@ -36,10 +24,10 @@ docker-compose build
 docker-compose up
 ```
 
-🚨 When running `docker-compose up` on macOS, a warning about a missing environment variable named `OS` may appear. **You can safely ignore this warning!**
+When running `docker-compose up` on macOS, a warning about a missing environment variable named `OS` may appear. **You can safely ignore this warning!**
 
 <aside>
-📢 Once everything loads, you can make your way to http://localhost:3000/ to check out the front end!
+Once everything loads, you can make your way to http://localhost:3000/ to check out the front end!
 
 </aside>
 
@@ -47,15 +35,12 @@ docker-compose up
 
 ### Inventory
 
----
 
 ### Service
 
----
 
-The service microservice keeps track of service appointments for automobiles and their owners.
 
-More specifically, it enables customers to schedule service appointments, view appointment details, and review appointment history once an appointment is marked as "finished". The service history page includes a search function, allowing customers to easily find their vehicle by its VIN. This microservice polls the VIN data from the Inventory through a value object (named AutomobileVO here) to check if the vehicle qualifies for “VIP treatment”. Our dealership offers VIP treatment to customers who have purchased a vehicle from us.
+The service microservice keeps track of service appointments for automobiles and their owners. More specifically, it enables customers to schedule service appointments, view appointment details, and review appointment history once an appointment is marked as "finished". The service history page includes a search function, allowing customers to easily find their vehicle by its VIN. This microservice polls the VIN data from the Inventory through a value object (named AutomobileVO here) to check if the vehicle qualifies for “VIP treatment”. Our dealership offers VIP treatment to customers who have purchased a vehicle from us.
 
 The customer can also create a technician. This is visible when creating a new service appointment, as you select a technician in the form.
 
@@ -63,13 +48,11 @@ By utilizing states in the components, the database always contains the most up-
 
 ### Sale
 
----
 
 This sales microservice organizes the application to have all ‘sales’ related functions to be easily accessible by users. You can create a new customer, list all customers, list all sales, list all sales made by a specific salesperson, create a sale, create a salesperson and list all salespeople. The microservice will utilize the Automobile model in the Inventory directory and poll information from that file so it can stay updated. A built-in function that our ‘Create a Sale Form’ has is that the automobiles that show up in the automobiles drop-down list will only include cars that have not yet been sold. This functionality prevents any selling of duplicate cars (which have unique VINs).
 
 ## RestFUL APIs
 
----
 
 ### Inventory APIs:
 
@@ -127,3 +110,4 @@ This sales microservice organizes the application to have all ‘sales’ relate
 | ————————————————— | ——————— | ————————————————————————— |
 
 ---
+![My image](2023-03-09_14_09_27-Excalidraw.png)
