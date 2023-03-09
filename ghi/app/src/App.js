@@ -11,6 +11,8 @@ import TechnicianForm from './Service/TechnicianForm';
 import SalesPersonForm from './Sales/SalesPersonForm';
 import CustomerForm from './Sales/CustomerForm';
 import SalesList from './Sales/SalesList';
+import SalesPersonHistory from './Sales/SalespersonHistory';
+import CreateSaleForm from './Sales/CreateSaleForm';
 
 
 function App() {
@@ -36,14 +38,6 @@ function App() {
             <Route path="new" element={<AutoMobileForm />} />
           </Route>
 
-
-
-
-
-
-
-
-
           <Route path='technicians'>
             <Route path="new" element={<TechnicianForm />} />
 
@@ -51,7 +45,7 @@ function App() {
 
           <Route path='salesperson'>
             <Route path="new" element={<SalesPersonForm />} />
-            <Route path="sales" element={<SalesPersonForm />} />
+            <Route path="history" element={<SalesPersonHistory />} />
 
           </Route>
 
@@ -60,7 +54,12 @@ function App() {
 
           </Route>
 
-          <Route path='sales' element={<SalesList />} />
+          <Route path='sales'>
+            <Route path="new" element={<CreateSaleForm />} />
+            <Route path='' element={<SalesList />} />
+          </Route>
+
+
 
         </Routes>
       </div>
