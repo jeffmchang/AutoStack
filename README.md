@@ -116,6 +116,8 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 ---
 
+<details>
+<summary><h2>SERVICES INSOMNIA</h2></summary>
 ### **Technician List  -“GET” Method**
 
 ```jsx
@@ -174,6 +176,8 @@ Example output:
 			"finished": true,
 			"id": 2
 		},
+    ]
+}
 ```
 
 ### **Creating and updating service appointment—”POST” & “PUT”**
@@ -212,7 +216,11 @@ Example output:
 	"id": 3
 }
 ```
+</details>
 
+
+<details>
+<summary><h2>SALES INSOMNIA</h2></summary>
 ### Sales — POST requests:
 
 > *New Sales Record input*
@@ -299,54 +307,54 @@ Example output:
 
 ```python
 {
-	"sales": [
-		{
-			"salesperson": "Jimmy John",
-			"customer": "Joey Tribbiani",
-			"vin": "AKSJDHF0101278389",
-			"sale_price": 400001,
-			"id": 24,
-			"employee_number": 1
-		},
-		{
-			"salesperson": "Wang Junior",
-			"customer": "Jake Seer",
-			"vin": "5YJ3E1EA5LF807996",
-			"sale_price": 400001,
-			"id": 25,
-			"employee_number": 2
-		}
-  ]
+    "sales": [
+        {
+            "salesperson": "Jimmy John",
+            "customer": "Joey Tribbiani",
+            "vin": "AKSJDHF0101278389",
+            "sale_price": 400001,
+            "id": 24,
+            "employee_number": 1
+        },
+        {
+            "salesperson": "Wang Junior",
+            "customer": "Jake Seer",
+            "vin": "5YJ3E1EA5LF807996",
+            "sale_price": 400001,
+            "id": 25,
+            "employee_number": 2
+        }
+    ]
 }
 ```
 
 > *Specific Salespeople return*
 >
->
-> ```python
-> [
-> 	{
-> 		"salesperson": "Sal Callord",
-> 		"customer": "Jeff Chong",
-> 		"vin": "A98SDHF908YH928H3",
-> 		"sale_price": 213122,
-> 		"id": 28,
-> 		"employee_number": 4123
-> 	},
-> 	{
-> 		"salesperson": "Sal Callord",
-> 		"customer": "Jeff Chong",
-> 		"vin": "OJASD98FJH283YH9H",
-> 		"sale_price": 4123,
-> 		"id": 29,
-> 		"employee_number": 4123
-> 	}
-> ]
-> ```
->
 
-> *All Salespeople return*
->
+ ```python
+[
+ 	{
+ 		"salesperson": "Sal Callord",
+ 		"customer": "Jeff Chong",
+ 		"vin": "A98SDHF908YH928H3",
+ 		"sale_price": 213122,
+ 		"id": 28,
+ 		"employee_number": 4123
+ 	},
+ 	{
+ 		"salesperson": "Sal Callord",
+ 		"customer": "Jeff Chong",
+ 		"vin": "OJASD98FJH283YH9H",
+ 		"sale_price": 4123,
+ 		"id": 29,
+ 		"employee_number": 4123
+ 	}
+]
+```
+
+
+*All Salespeople return*
+
 
 ```python
 {
@@ -391,5 +399,9 @@ Example output:
 	}
 ]
 ```
+
+</details>
+
+
 
 ---
