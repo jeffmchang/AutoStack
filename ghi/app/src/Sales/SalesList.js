@@ -20,6 +20,10 @@ useEffect(() => {
 
 }, []);
 
+const handleClick = () => {
+    window.location.href = '/sales/new'
+}
+
 return (
     <div className="container">
     <h1 className="card display-5 text-dark fw-bold text-center my-3">
@@ -50,6 +54,8 @@ return (
         })}
         </tbody>
     </table>
+    <button
+        onClick={handleClick} className="btn btn-primary">Create a Sale</button>
     </div>
 );
 }

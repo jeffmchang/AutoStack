@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 function CreateSaleForm() {
+    const navigate = useNavigate();
     // sales database-----------------------------------------
     const [sales, setSales] = useState('');
     const fetchSales = async () => {
@@ -100,14 +103,20 @@ function CreateSaleForm() {
             },
         };
 
+
+
         const response = await fetch(saleUrl, fetchConfig);
         if (response.ok) {
             setAutomobiles([]);
             setSalespeople([]);
             setCustomers([]);
             setSalesPrice('');
+            navigate('/sales');
         }
     }
+
+
+
     return (
         <div className="row">
             <div className="offset-3 col-6">

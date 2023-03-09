@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
 function AppointmentForm(){
-
     //drop down............................................
     const [technicians, setTechnicians] = useState([]);
     const fetchData = async () => {
