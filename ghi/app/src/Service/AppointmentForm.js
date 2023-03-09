@@ -96,7 +96,7 @@ function AppointmentForm(){
                 onChange={handleVinChange}
                 placeholder="Vin"
                 required type="text"
-                maxlength="17"
+                maxLength="17"
                 name="vin"
                 id="vin"
                 className="form-control"

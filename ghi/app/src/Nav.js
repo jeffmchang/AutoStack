@@ -57,7 +57,7 @@ function Nav() {
                 <li><Link className="dropdown-item" to="technicians/new">Add New Technician</Link></li>
                 <li><Link className="dropdown-item" to="appointments/">Service Appointment List</Link></li>
                 <li><Link className="dropdown-item" to="appointments/history">Service Appointment History</Link></li>
-                <li><Link className="dropdown-item" to="appointments/new">Add New Appointment</Link></li>
+                <li><Link className="dropdown-item" to="appointments/new">Create A New Service Appointment</Link></li>
               </ul>
             </div>
 
