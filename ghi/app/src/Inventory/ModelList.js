@@ -40,9 +40,9 @@ function ModelList( ){
                         </tr>
                     );
                 })}
-                <tr><th><Link to="/models/new" className="btn btn-primary btn-md" >Create</Link></th></tr>
                 </tbody>
             </table>
+            <Link to="/models/new" className="btn btn-primary btn-md" >Create</Link>
         </div>
     );
 }
