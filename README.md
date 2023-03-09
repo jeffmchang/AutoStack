@@ -221,6 +221,7 @@ Example output:
 
 <details>
 <summary><h2>SALES INSOMNIA</h2></summary>
+
 ### Sales — POST requests:
 
 > *New Sales Record input*
@@ -249,7 +250,6 @@ Example output:
 }
 ```
 
----
 
 > *New Customer input*
 >
@@ -276,7 +276,7 @@ Example output:
 }
 ```
 
----
+
 
 > *New Salesperson input*
 >
@@ -353,8 +353,8 @@ Example output:
 ```
 
 
-*All Salespeople return*
-
+>*All Salespeople return*
+>
 
 ```python
 {
@@ -378,7 +378,6 @@ Example output:
 }
 ```
 
----
 
 > *All Customers*
 >
