@@ -35,10 +35,15 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 ### Inventory
 
+---
+
+Our inventory will contain three different types of models to use as databases: Automobile, VehicleModel, and Manufacturer. Automobile will serve as the core database for our VO (value object) models in both Sales and Service. It will provide VIN, color, year, and model information. VehicleModel will include the model name and a picture URL, as well as the manufacturer (which is pulled from the Manufacturer database). Manufacturer will have a standalone attribute for just the name, which is a straightforward property to supply our VehicleModel.
+
+The purpose of this inventory is to gather and organize information into our respective microservices. By doing so, we can ensure that all databases are kept up to speed when presenting information on the webpage. This centralized inventory acts as a hub for all relevant data, allowing us to easily access and utilize information across our various microservices. This not only improves the accuracy and consistency of the information presented on the webpage, but also streamlines our internal processes by reducing the need for redundant data entry and updates.
 
 ### Service
 
-
+---
 
 The service microservice keeps track of service appointments for automobiles and their owners. More specifically, it enables customers to schedule service appointments, view appointment details, and review appointment history once an appointment is marked as "finished". The service history page includes a search function, allowing customers to easily find their vehicle by its VIN. This microservice polls the VIN data from the Inventory through a value object (named AutomobileVO here) to check if the vehicle qualifies for “VIP treatment”. Our dealership offers VIP treatment to customers who have purchased a vehicle from us.
 
@@ -48,11 +53,17 @@ By utilizing states in the components, the database always contains the most up-
 
 ### Sale
 
+---
 
-This sales microservice organizes the application to have all ‘sales’ related functions to be easily accessible by users. You can create a new customer, list all customers, list all sales, list all sales made by a specific salesperson, create a sale, create a salesperson and list all salespeople. The microservice will utilize the Automobile model in the Inventory directory and poll information from that file so it can stay updated. A built-in function that our ‘Create a Sale Form’ has is that the automobiles that show up in the automobiles drop-down list will only include cars that have not yet been sold. This functionality prevents any selling of duplicate cars (which have unique VINs).
+The sales microservice is a powerful tool that makes all 'sales' related functions easily accessible to users. It offers a wide range of functions such as creating a new customer, listing all customers, listing all sales, listing all sales made by a specific salesperson, creating a sale, creating a salesperson, and listing all salespeople.
+
+To ensure that the microservice stays updated, it utilizes the Automobile model in the Inventory directory and polls information from that file. This information is then used to offer the most accurate data when presenting information on the webpage.
+
+One of the most impressive features of the sales microservice is the built-in functionality of the 'Create a Sale Form'. This functionality ensures that the automobiles that show up in the automobiles drop-down list are only cars that have not yet been sold. By doing this, the microservice prevents any selling of duplicate cars (which have unique VINs).
+
+Overall, the sales microservice is a crucial component of the system that makes the selling process more efficient and streamlined. Its functions ensure that all relevant data is kept up to speed and that the information presented on the webpage is accurate and consistent.
 
 ## RestFUL APIs
-
 
 ### Inventory APIs:
 
@@ -110,4 +121,4 @@ This sales microservice organizes the application to have all ‘sales’ relate
 | ————————————————— | ——————— | ————————————————————————— |
 
 ---
-![My image](2023-03-09_14_09_27-Excalidraw.png)
+![My image](excalidraw.png)
