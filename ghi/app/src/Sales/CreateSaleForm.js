@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Component} from "react";
 import { useNavigate } from 'react-router-dom';
 
 
 function CreateSaleForm() {
+
     const navigate = useNavigate();
     // sales database-----------------------------------------
     const [sales, setSales] = useState('');
@@ -31,9 +32,11 @@ function CreateSaleForm() {
         setAutomobiles(data.autos);
         }
     };
+
     useEffect(() => {
         fetchAutomobiles();
     }, []);
+
     // salesperson-----------------------------------------
     const [salesperson, setSalesperson] = useState('');
     const [salespeople, setSalespeople] = useState([]);
