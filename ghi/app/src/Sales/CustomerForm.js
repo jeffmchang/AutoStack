@@ -24,7 +24,6 @@ function CustomerForm() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const data = {};
-        console.log(data)
 
         data.name = name;
         data.address = address;

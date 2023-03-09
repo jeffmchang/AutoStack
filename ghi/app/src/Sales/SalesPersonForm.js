@@ -18,7 +18,7 @@ function SalesPersonForm() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const data = {};
-        console.log(data)
+
 
         data.name = name;
         data.employee_number = employee_number;

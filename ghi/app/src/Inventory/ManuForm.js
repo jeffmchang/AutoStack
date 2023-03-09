@@ -12,7 +12,6 @@ function ManuForm() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const data = {};
-        console.log(data)
         data.name = manufacturer;
 
         const manuUrl = 'http://localhost:8100/api/manufacturers/';

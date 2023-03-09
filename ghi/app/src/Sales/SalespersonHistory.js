@@ -29,7 +29,6 @@ const fetchData = async () => {
 
     if (response.ok) {
     const data = await response.json();
-    console.log(data);
     setSale(data);
     }
 };
