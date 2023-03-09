@@ -46,9 +46,6 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 </details>
 
 
-
-### Service
-
 <details>
     <summary><h3>Service</h3></summary>
     The service microservice keeps track of service appointments for automobiles and their owners. More specifically, it enables customers to schedule service appointments, view appointment details, and review appointment history once an appointment is marked as "finished". The service history page includes a search function, allowing customers to easily find their vehicle by its VIN. This microservice polls the VIN data from the Inventory through a value object (named AutomobileVO here) to check if the vehicle qualifies for “VIP treatment”. Our dealership offers VIP treatment to customers who have purchased a vehicle from us.
@@ -58,8 +55,6 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
     By utilizing states in the components, the database always contains the most up-to-date information for the objects; for example, when they are created, deleted, or updated.
 </details>
 
-
-### Sale
 
 <details>
     <summary><h3>Sale</h3></summary>
