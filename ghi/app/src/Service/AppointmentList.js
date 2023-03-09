@@ -42,7 +42,7 @@ function AppointmentList( ){
         }
     }
 
-    //
+    //update the appointments that are finished
 
     return (
         <div className="my-5 container">

@@ -96,6 +96,7 @@ function AutoForm() {
                         </div>
                         <div className="form-floating mb-3">
                             <input
+                                minLength="17"
                                 maxlength="17"
                                 value={vin}
                                 onChange={handleVinChange}

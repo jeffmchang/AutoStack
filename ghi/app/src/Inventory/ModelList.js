@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Link } from "react-router-dom";
 
 function ModelList( ){
     const[models, setModels] = useState([]);
@@ -39,6 +40,7 @@ function ModelList( ){
                         </tr>
                     );
                 })}
+                <tr><th><Link to="/models/new" className="btn btn-primary btn-md" >Create</Link></th></tr>
                 </tbody>
             </table>
         </div>

@@ -96,12 +96,13 @@ function AppointmentForm(){
                 onChange={handleVinChange}
                 placeholder="Vin"
                 required type="text"
+                minLength="17"
                 maxLength="17"
                 name="vin"
                 id="vin"
                 className="form-control"
                 />
-                <label htmlFor="vin">Vin (17 characters)</label>
+                <label htmlFor="vin">Vin</label>
               </div>
 
               {/* Customer Name......................................... */}
@@ -137,13 +138,13 @@ function AppointmentForm(){
                 <input
                 value={reason}
                 onChange={handleReasonChange}
-                placeholder="Reason"
+                placeholder="Short Reason"
                 required type="text"
                 name="reason"
                 id="reason"
                 className="form-control"
                 />
-                <label htmlFor="reason">Reason</label>
+                <label htmlFor="reason">Short Reason</label>
               </div>
 
               {/* select a tech......................................... */}
