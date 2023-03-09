@@ -36,28 +36,24 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 ---
 
 
-## Overview of the microservices
+# Overview of the microservices
 
 
 <details>
-    <summary><h3>Inventory</h3></summary>
+    <summary><h2>Inventory</h2></summary>
     Our inventory will contain three different types of models to use as databases: Automobile, VehicleModel, and Manufacturer. Automobile will serve as the core database for our VO (value object) models in both Sales and Service. It will provide VIN, color, year, and model information. VehicleModel will include the model name and a picture URL, as well as the manufacturer (which is pulled from the Manufacturer database). Manufacturer will have a standalone attribute for just the name, which is a straightforward property to supply our VehicleModel. The purpose of this inventory is to gather and organize information into our respective microservices. By doing so, we can ensure that all databases are kept up to speed when presenting information on the webpage.
 
 </details>
 
 
 <details>
-    <summary><h3>Service</h3></summary>
-    The service microservice keeps track of service appointments for automobiles and their owners. More specifically, it enables customers to schedule service appointments, view appointment details, and review appointment history once an appointment is marked as "finished". The service history page includes a search function, allowing customers to easily find their vehicle by its VIN. This microservice polls the VIN data from the Inventory through a value object (named AutomobileVO here) to check if the vehicle qualifies for “VIP treatment”. Our dealership offers VIP treatment to customers who have purchased a vehicle from us.
-
-    The customer can also create a technician. This is visible when creating a new service appointment, as you select a technician in the form.
-
-    By utilizing states in the components, the database always contains the most up-to-date information for the objects; for example, when they are created, deleted, or updated.
+    <summary><h2>Service</h2></summary>
+    The service microservice keeps track of service appointments for automobiles and their owners. More specifically, it enables customers to schedule service appointments, view appointment details, and review appointment history once an appointment is marked as "finished". The service history page includes a search function, allowing customers to easily find their vehicle by its VIN. This microservice polls the VIN data from the Inventory through a value object (named AutomobileVO here) to check if the vehicle qualifies for “VIP treatment”. Our dealership offers VIP treatment to customers who have purchased a vehicle from us. The customer can also create a technician. This is visible when creating a new service appointment, as you select a technician in the form. By utilizing states in the components, the database always contains the most up-to-date information for the objects; for example, when they are created, deleted, or updated.
 </details>
 
 
 <details>
-    <summary><h3>Sale</h3></summary>
+    <summary><h2>Sale</h2></summary>
     The sales microservice is a powerful tool that makes all 'sales' related functions easily accessible to users. It offers a wide range of functions such as creating a new customer, listing all customers, listing all sales, listing all sales made by a specific salesperson, creating a sale, creating a salesperson, and listing all salespeople. To ensure that the microservice stays updated, it utilizes the Automobile model in the Inventory directory and polls information from that file. This information is then used to offer the most accurate data when presenting information on the webpage. One of the most impressive features of the sales microservice is the built-in functionality of the 'Create a Sale Form'. This functionality ensures that the automobiles that show up in the automobiles drop-down list are only cars that have not yet been sold. By doing this, the microservice prevents any selling of duplicate cars (which have unique VINs). Overall, the sales microservice is a crucial component of the system that makes the selling process more efficient and streamlined. Its functions ensure that all relevant data is kept up to speed and that the information presented on the webpage is accurate and consistent.
 </details>
 
@@ -117,5 +113,283 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 | Salesperson History | GET | http://localhost:8090/api/salesperson/<:id>/sales |
 | Create a Sale | POST | http://localhost:8090/api/sales/ |
 | ————————————————— | ——————— | ————————————————————————— |
+
+---
+
+### **Technician List  -“GET” Method**
+
+```jsx
+{
+	"technicians": [
+		{
+			"href": "/api/technician/1/",
+			"name": "Cole",
+			"employee_number": 1,
+			"id": 1
+		},
+	]
+}
+```
+
+### **Create or update a technician-”POST” & “PUT”**
+
+Example Input:
+
+```jsx
+{
+	"name": "Melissa",
+	"employee_number": 11
+}
+```
+
+Example output:
+
+```jsx
+{
+	"href": "/api/technician/11/",
+	"name": "Melissa",
+	"employee_number": 11,
+	"id": 11
+}
+```
+
+### **Service Appointment List- “GET” Method**
+
+```jsx
+{
+	"appointments": [
+		{
+			"href": "/api/appointment/1/",
+			"vin": "33333333333333335",
+			"customer_name": "Sofia Uribe",
+			"date": "2023-03-08T22:15:00+00:00",
+			"reason": "Oil Change",
+			"vip": true,
+			"technician": {
+				"href": "/api/technician/2/",
+				"name": "Carlos",
+				"employee_number": 2,
+				"id": 2
+			},
+			"finished": true,
+			"id": 2
+		},
+```
+
+### **Creating and updating service appointment—”POST” & “PUT”**
+
+Example input:
+
+```jsx
+{
+	"vin": 11111111111111178,
+	"customer_name": "Sofia",
+	"date": "2023-03-12",
+	"reason": "flat tire",
+	"vip": "False",
+	"finished": "False",
+	"technician": 2
+}
+```
+
+Example output:
+
+```jsx
+{
+	"href": "/api/appointment/30/",
+	"vin": 11111111111111178,
+	"customer_name": "Sofia",
+	"date": "2023-03-12",
+	"reason": "flat tire",
+	"vip": false,
+	"technician": {
+		"href": "/api/technician/2/",
+		"name": "Carlos",
+		"employee_number": 2,
+		"id": 2
+	},
+	"finished": "False",
+	"id": 3
+}
+```
+
+### Sales — POST requests:
+
+> *New Sales Record input*
+>
+
+```python
+{
+	"sale_price": 28000,
+	"vin": "5YJ3E1EA5LF807996",
+	"salesperson": 2,
+	"customer": 1
+}
+```
+
+> *New Sales Record response*
+>
+
+```python
+{
+	"salesperson": "Sal Callord",
+	"customer": "Kevin Lu",
+	"vin": "5YJ3E1EA5LF807996",
+	"sale_price": 28000,
+	"id": 1,
+	"employee_number": 3213
+}
+```
+
+---
+
+> *New Customer input*
+>
+
+```python
+{
+	"name": "Joey Tribbiani",
+	"address": "123 Hope St, Lane, 12325",
+	"phone_number": 1231231424
+}
+```
+
+> *New Customer response*
+>
+
+```python
+{
+	"salesperson": "Sal Callord",
+	"customer": "Kevin Lu",
+	"vin": "5YJ3E1EA5LF807996",
+	"sale_price": 28000,
+	"id": 1,
+	"employee_number": 3213
+}
+```
+
+---
+
+> *New Salesperson input*
+>
+
+```python
+{
+	"name": "Jimmy John",
+	"employee_number": 1
+}
+```
+
+> *New Salesperson response*
+>
+
+```python
+{
+	"name": "Jimmy John",
+	"employee_number": 1
+}
+```
+
+---
+
+### Sales — GET requests:
+
+> *All Sales return*
+>
+
+```python
+{
+	"sales": [
+		{
+			"salesperson": "Jimmy John",
+			"customer": "Joey Tribbiani",
+			"vin": "AKSJDHF0101278389",
+			"sale_price": 400001,
+			"id": 24,
+			"employee_number": 1
+		},
+		{
+			"salesperson": "Wang Junior",
+			"customer": "Jake Seer",
+			"vin": "5YJ3E1EA5LF807996",
+			"sale_price": 400001,
+			"id": 25,
+			"employee_number": 2
+		}
+  ]
+}
+```
+
+> *Specific Salespeople return*
+>
+>
+> ```python
+> [
+> 	{
+> 		"salesperson": "Sal Callord",
+> 		"customer": "Jeff Chong",
+> 		"vin": "A98SDHF908YH928H3",
+> 		"sale_price": 213122,
+> 		"id": 28,
+> 		"employee_number": 4123
+> 	},
+> 	{
+> 		"salesperson": "Sal Callord",
+> 		"customer": "Jeff Chong",
+> 		"vin": "OJASD98FJH283YH9H",
+> 		"sale_price": 4123,
+> 		"id": 29,
+> 		"employee_number": 4123
+> 	}
+> ]
+> ```
+>
+
+> *All Salespeople return*
+>
+
+```python
+{
+	"salespersons": [
+		{
+			"name": "Sal Callord",
+			"employee_number": 4123,
+			"id": 5
+		},
+		{
+			"name": "Larry Freemen",
+			"employee_number": 4123,
+			"id": 6
+		},
+		{
+			"name": "Ronald Gordon",
+			"employee_number": 2213,
+			"id": 7
+		}
+	]
+}
+```
+
+---
+
+> *All Customers*
+>
+
+```python
+[
+	{
+		"name": "Jeff Chang",
+		"address": "123 Main St, Pocoway, CA, 1234",
+		"phone_number": 1231231233,
+		"id": 7
+	},
+	{
+		"name": "Jimmy Johnson",
+		"address": "123 Main St, Pocoway, CA, 1234",
+		"phone_number": 1412312314,
+		"id": 8
+	}
+]
+```
 
 ---
