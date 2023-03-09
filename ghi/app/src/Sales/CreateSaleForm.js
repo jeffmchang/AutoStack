@@ -119,11 +119,9 @@ function CreateSaleForm() {
                         <div className="mb-3">
                         <select
                             onChange={handleAutomobileChange}
-                            required
-                            name="vin"
+                            required name="vin"
                             id="vin"
-                            className="form-select"
-                            >
+                            className="form-select">
                             <option value="">Choose a Automobile</option>
                             {filteredAutos && filteredAutos
                                 .map((auto, idx) => (
