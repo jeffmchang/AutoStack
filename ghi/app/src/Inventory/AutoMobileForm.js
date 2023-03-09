@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
+
 function AutoForm() {
+
     // fields-----------------------------------------
     const [color, setColor] = useState('');
     const handleColorChange = (event) => {
@@ -96,6 +98,7 @@ function AutoForm() {
                         </div>
                         <div className="form-floating mb-3">
                             <input
+                                minLength="17"
                                 maxLength="17"
                                 value={vin}
                                 onChange={handleVinChange}

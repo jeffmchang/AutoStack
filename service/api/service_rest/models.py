@@ -20,6 +20,7 @@ class Appointment(models.Model):
     date = models.DateTimeField(null=True)
     reason = models.CharField(max_length=200)
     vip = models.BooleanField(default=False, blank=True, null=True)
+    finished = models.BooleanField(default=False, null=True)
 
     technician = models.ForeignKey(
         Technician,

@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Component} from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 function CreateSaleForm() {
+
+    const navigate = useNavigate();
     // sales database-----------------------------------------
     const [sales, setSales] = useState('');
     const fetchSales = async () => {
@@ -28,9 +32,11 @@ function CreateSaleForm() {
         setAutomobiles(data.autos);
         }
     };
+
     useEffect(() => {
         fetchAutomobiles();
     }, []);
+
     // salesperson-----------------------------------------
     const [salesperson, setSalesperson] = useState('');
     const [salespeople, setSalespeople] = useState([]);
@@ -100,14 +106,20 @@ function CreateSaleForm() {
             },
         };
 
+
+
         const response = await fetch(saleUrl, fetchConfig);
         if (response.ok) {
             setAutomobiles([]);
             setSalespeople([]);
             setCustomers([]);
             setSalesPrice('');
+            navigate('/sales');
         }
     }
+
+
+
     return (
         <div className="row">
             <div className="offset-3 col-6">
@@ -119,11 +131,9 @@ function CreateSaleForm() {
                         <div className="mb-3">
                         <select
                             onChange={handleAutomobileChange}
-                            required
-                            name="vin"
+                            required name="vin"
                             id="vin"
-                            className="form-select"
-                            >
+                            className="form-select">
                             <option value="">Choose a Automobile</option>
                             {filteredAutos && filteredAutos
                                 .map((auto, idx) => (

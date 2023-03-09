@@ -9,7 +9,6 @@ const fetchPerson = async () => {
 
     if (response.ok) {
     const data = await response.json();
-    console.log(data);
     setSalesperson(data.salespersons);
     }
 };

@@ -17,31 +17,6 @@ function ServiceHistory( ){
 
     //for search
     const[search, setSearch] = useState('');
-    const[appointment, setAppointment] = useState([]);
-
-    // handle submit.....................................
-    // const handleSubmit = async (event) => {
-    //     event.preventDefault();
-
-    //     const data = {};
-        // data.vin = vin;
-
-    //     const modelUrl = 'http://localhost:8080/api/technicians/';
-    //     const fetchConfig = {
-    //         method: 'post',
-    //         body: JSON.stringify(data),
-    //         headers: {
-    //             'Content-type': 'application/json',
-    //         }
-    //     };
-
-    //     const response = await fetch(modelUrl, fetchConfig);
-
-    //     if (response.ok) {
-    //         setName('');
-    //         setEmployeeNumber('');
-    //     }
-    // };
 
     useEffect(() => {
         fetchData();
@@ -51,18 +26,18 @@ function ServiceHistory( ){
         <div className="my-5 container">
             <div className="input-group mb-3">
                 <input
-                onChange={(event) => setSearch(event.target.value)}
-                type="text"
-                className="form-control"
-                placeholder="Type to search..."
-                aria-label="search"
-                aria-describedby="basic-addon2"
+                    onChange={(event) => setSearch(event.target.value)}
+                    type="text"
+                    className="form-control"
+                    placeholder="Type to search VIN..."
+                    aria-label="search"
+                    aria-describedby="basic-addon2"
                 >
                 </input>
 
-                <div className="input-group-append">
+                {/* <div className="input-group-append">
                     <button className="btn btn-outline-secondary" type="button">Search VIN</button>
-                </div>
+                </div> */}
             </div>
                 <h1 className="text-dark fw-bold text-center my-3">Service Appointment History</h1>
                 <h5

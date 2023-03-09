@@ -10,7 +10,6 @@ const fetchData = async () => {
 
     if (response.ok) {
     const data = await response.json();
-    console.log(data);
     setSale(data.sales);
     }
 };
@@ -19,6 +18,10 @@ useEffect(() => {
     fetchData();
 
 }, []);
+
+const handleClick = () => {
+    window.location.href = '/sales/new'
+}
 
 return (
     <div className="container">
@@ -50,6 +53,8 @@ return (
         })}
         </tbody>
     </table>
+    <button
+        onClick={handleClick} className="btn btn-primary">Create a Sale</button>
     </div>
 );
 }
