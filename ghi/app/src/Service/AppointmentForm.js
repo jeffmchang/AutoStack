@@ -28,10 +28,22 @@ function AppointmentForm(){
         setCustomerName(value);
     };
 
-    const[manufacturerId, setManufacturerId] = useState('');
-    const handleManufacturerChange = (event) => {
+    const[date, setDate] = useState('');
+    const handleDateChange = (event) => {
         const value = event.target.value;
-        setManufacturerId(value);
+        setDate(value);
+    };
+
+    const[reason, setReason] = useState('');
+    const handleReasonChange = (event) => {
+        const value = event.target.value;
+        setReason(value);
+    };
+
+    const[technician, setTechnician] = useState('');
+    const handleTechnicianChange = (event) => {
+        const value = event.target.value;
+        setTechnician(value);
     };
 
     // handle submit.....................................
@@ -40,10 +52,12 @@ function AppointmentForm(){
 
         const data = {};
         data.vin = vin;
-        data.picture_url = pictureUrl;
-        data.manufacturer_id = manufacturerId;
+        data.customer_name = customerName;
+        data.date = date;
+        data.reason = reason;
+        data.technician = technician;
 
-        const modelUrl = 'http://localhost:8100/api/models/';
+        const appointmentUrl = 'http://localhost:8080/api/appointments/';
         const fetchConfig = {
             method: 'post',
             body: JSON.stringify(data),
@@ -52,12 +66,14 @@ function AppointmentForm(){
             }
         };
 
-        const response = await fetch(modelUrl, fetchConfig);
+        const response = await fetch(appointmentUrl, fetchConfig);
 
         if (response.ok) {
-            setName('');
-            setPictureUrl('');
-            setManufacturerId('');
+            setVin('');
+            setCustomerName('');
+            setDate('');
+            setReason('');
+            setTechnician('');
         }
     };
 
@@ -70,51 +86,80 @@ function AppointmentForm(){
         <div className="row">
         <div className="offset-3 col-6">
           <div className="shadow p-4 mt-4">
-            <h1>Create A New Vehicle Model</h1>
+            <h1>Create A Service Appointment</h1>
             <form onSubmit={handleSubmit} id="create-model-form">
 
-              {/* name.......................................... */}
+              {/* vin.......................................... */}
               <div className="form-floating mb-3">
                 <input
-                value={name}
-                onChange={handleNameChange}
-                placeholder="Name"
+                value={vin}
+                onChange={handleVinChange}
+                placeholder="Vin"
                 required type="text"
-                name="name"
-                id="name"
+                maxlength="17"
+                name="vin"
+                id="vin"
                 className="form-control"
                 />
-                <label htmlFor="name">Vehicle Model Name</label>
+                <label htmlFor="vin">Vin (17 characters)</label>
               </div>
 
-              {/* picture......................................... */}
+              {/* Customer Name......................................... */}
               <div className="form-floating mb-3">
                 <input
-                value={pictureUrl}
-                onChange={handlePictureUrlChange}
-                placeholder="Picture URL"
+                value={customerName}
+                onChange={handleCustomerNameChange}
+                placeholder="Customer Name"
                 required type="text"
-                name="picture_url"
-                id="picture_url"
+                name="customer_name"
+                id="customer_name"
                 className="form-control"
                 />
-                <label htmlFor="picture_url">Picture URL</label>
+                <label htmlFor="customer_name">Customer Name</label>
               </div>
 
-              {/* manufacturer......................................... */}
+              {/* Date......................................... */}
+              <div className="form-floating mb-3">
+                <input
+                value={date}
+                onChange={handleDateChange}
+                placeholder="Date/Time"
+                required type="datetime-local"
+                name="date"
+                id="date"
+                className="form-control"
+                />
+                <label htmlFor="date">Appointment Date/Time</label>
+              </div>
+
+              {/* Reason........................................ */}
+              <div className="form-floating mb-3">
+                <input
+                value={reason}
+                onChange={handleReasonChange}
+                placeholder="Reason"
+                required type="text"
+                name="reason"
+                id="reason"
+                className="form-control"
+                />
+                <label htmlFor="reason">Reason</label>
+              </div>
+
+              {/* select a tech......................................... */}
               <div className="mb-3">
                 <select
-                value={manufacturerId}
-                onChange={handleManufacturerChange}
-                required name="manufacturer"
-                id="manufacturer"
+                value={technician}
+                onChange={handleTechnicianChange}
+                required name="technician"
+                id="technician"
                 className="form-select"
                 >
-                  <option value="">Choose a Manufacturer</option>
-                  {manufacturers.map(manufacturer => {
+                  <option value="">Choose a Technician</option>
+                  {technicians.map(technician => {
                     return (
-                      <option key={manufacturer.id} value={manufacturer.id}>
-                        {manufacturer.name}
+                      <option key={technician.id} value={technician.id}>
+                        {technician.name}
                       </option>
                     );
                   })}
@@ -128,4 +173,4 @@ function AppointmentForm(){
     );
 }
 
-export default ModelForm;
+export default AppointmentForm;

@@ -30,7 +30,7 @@ class AppointmentEncoder(ModelEncoder):
         "date",
         "reason",
         "vip",
-        "id",
+        "technician"
     ]
     encoders = {
         "technician": TechnicianEncoder()
@@ -42,7 +42,7 @@ def list_technicians(request):
     if request.method == "GET":
         technicians = Technician.objects.all()
         return JsonResponse(
-            {"techicians": technicians},
+            {"technicians": technicians},
             encoder=TechnicianEncoder,
         )
     # CREATING A TECH
@@ -95,9 +95,9 @@ def list_appointments(request):
     else:
         content=json.loads(request.body)
 
-        # seeing the tech exists by it's id
+        # seeing the tech exists
         try:
-            technician = Technician.objects.get(id=content["technician_id"])
+            technician = Technician.objects.get(id=content["technician"])
             content["technician"] = technician
 
             # seeing if they're vip by seeing if their vin is in the inventory (AutomobileVO)

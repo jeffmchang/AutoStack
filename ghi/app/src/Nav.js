@@ -50,6 +50,17 @@ function Nav() {
               </ul>
             </div>
 
+            {/* Services------------------------------------------------------- */}
+            <div className="dropdown">
+              <Link className="nav-link text-white dropdown-toggle" to="technicians" type="button" data-bs-toggle="dropdown" aria-expanded="false">Services</Link>
+              <ul className="dropdown-menu">
+                <li><Link className="dropdown-item" to="technicians/new">Add New Technician</Link></li>
+                <li><Link className="dropdown-item" to="appointments/">Service Appointment List</Link></li>
+                <li><Link className="dropdown-item" to="appointments/history">Service Appointment History</Link></li>
+                <li><Link className="dropdown-item" to="appointments/new">Add New Appointment</Link></li>
+              </ul>
+            </div>
+
           </ul>
         </div>
       </div>
