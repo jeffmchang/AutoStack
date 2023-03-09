@@ -40,8 +40,10 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 
 <details>
-<summary>###Inventory</summary>
-Our inventory will contain three different types of models to use as databases: Automobile, VehicleModel, and Manufacturer. Automobile will serve as the core database for our VO (value object) models in both Sales and Service. It will provide VIN, color, year, and model information. VehicleModel will include the model name and a picture URL, as well as the manufacturer (which is pulled from the Manufacturer database). Manufacturer will have a standalone attribute for just the name, which is a straightforward property to supply our VehicleModel. The purpose of this inventory is to gather and organize information into our respective microservices. By doing so, we can ensure that all databases are kept up to speed when presenting information on the webpage. This centralized inventory acts as a hub for all relevant data, allowing us to easily access and utilize information across our various microservices. This not only improves the accuracy and consistency of the information presented on the webpage, but also streamlines our internal processes by reducing the need for redundant data entry and updates.
+<summary><h3>Inventory</h3></summary>
+Our inventory will contain three different types of models to use as databases: Automobile, VehicleModel, and Manufacturer. Automobile will serve as the core database for our VO (value object) models in both Sales and Service. It will provide VIN, color, year, and model information. VehicleModel will include the model name and a picture URL, as well as the manufacturer (which is pulled from the Manufacturer database). Manufacturer will have a standalone attribute for just the name, which is a straightforward property to supply our VehicleModel.
+
+The purpose of this inventory is to gather and organize information into our respective microservices. By doing so, we can ensure that all databases are kept up to speed when presenting information on the webpage. This centralized inventory acts as a hub for all relevant data, allowing us to easily access and utilize information across our various microservices. This not only improves the accuracy and consistency of the information presented on the webpage, but also streamlines our internal processes by reducing the need for redundant data entry and updates.
 
 </details>
 
