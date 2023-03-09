@@ -64,7 +64,10 @@ function ServiceHistory( ){
                     <button className="btn btn-outline-secondary" type="button">Search VIN</button>
                 </div>
             </div>
-                <h1 className="text-dark fw-bold text-center my-3">Appointments</h1>
+                <h1 className="text-dark fw-bold text-center my-3">Service Appointment History</h1>
+                <h5
+                   className="text-center my-3"> All service history is stored here
+                </h5>
                 <table className="table table-striped">
                     <thead>
                         <tr>

@@ -35,7 +35,7 @@ function AppointmentList( ){
 
     return (
         <div className="my-5 container">
-            <h1 className="text-dark fw-bold text-center my-3">Appointments</h1>
+            <h1 className="text-dark fw-bold text-center my-3">Service Appointments</h1>
             <table className="table table-striped">
                 <thead>
                     <tr>
