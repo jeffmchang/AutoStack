@@ -45,6 +45,10 @@ class SaleEncoder(ModelEncoder):
         'id'
     ]
 
+    encoders = {
+        'salesperson': SalespersonEncoder(),
+    }
+
     def get_extra_data(self, o):
         return {
             "salesperson": o.salesperson.name,
@@ -68,7 +72,7 @@ def api_list_sales(request):
         content = json.loads(request.body)
 
         try:
-            salesperson = Salesperson.objects.get(id=content["salesperson"])
+            salesperson = Salesperson.objects.get(id=content['salesperson'])
             content['salesperson'] = salesperson
 
         except Salesperson.DoesNotExist:
@@ -97,7 +101,7 @@ def api_list_sales(request):
                 {'error': 'Customer not found'},
                 status=400,
             )
-    print("THIS IS CONTENT----------------------------",content)
+
     sale = Sale.objects.create(**content)
     return JsonResponse(
         sale,
@@ -112,7 +116,7 @@ def api_list_salespeople(request):
     if request.method == "GET":
         salespersons = Salesperson.objects.all()
         return JsonResponse(
-            salespersons,
+            {"salespersons": salespersons},
             encoder=SalespersonEncoder,
             safe=False,
         )
@@ -170,3 +174,15 @@ def api_list_customers(request):
                 {"message":"Customer not found"},
                 safe=False,
             )
+
+# SALESPERSON HISTORY---------------------------------------------------------
+@require_http_methods(["GET"])
+def api_show_saleshistory(request, id):
+    if request.method == "GET":
+        salesperson = Salesperson.objects.get(id=id)
+        sales = Sale.objects.filter(salesperson=salesperson)
+        return JsonResponse(
+            sales,
+            encoder=SaleEncoder,
+            safe=False,
+        )

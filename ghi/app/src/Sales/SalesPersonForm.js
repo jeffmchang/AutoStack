@@ -63,6 +63,7 @@ function SalesPersonForm() {
                                 value={employee_number}
                                 onChange={handleEmployeeIdChange}
                                 placeholder="Employee ID#"
+                                maxLength={6}
                                 required type="text"
                                 name='employeeId' id="employeeId"
                                 className="form-control" />
