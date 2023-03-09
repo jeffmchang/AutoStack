@@ -31,6 +31,8 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 </aside>
 
+![My image](excalidraw.png)
+
 ## Overview of the microservices
 
 ### Inventory
@@ -121,4 +123,3 @@ Overall, the sales microservice is a crucial component of the system that makes 
 | ————————————————— | ——————— | ————————————————————————— |
 
 ---
-![My image](excalidraw.png)
