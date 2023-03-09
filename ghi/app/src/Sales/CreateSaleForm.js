@@ -74,6 +74,12 @@ function CreateSaleForm() {
     };
 
 
+    // filter-----------------------------------------
+    const filteredAutos = automobiles.filter(auto => {
+        return !sales.some(sale => sale.vin === auto.vin);
+    });
+
+
     // submit-----------------------------------------
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -113,20 +119,19 @@ function CreateSaleForm() {
                         <div className="mb-3">
                         <select
                             onChange={handleAutomobileChange}
-                            required name="vin"
+                            required
+                            name="vin"
                             id="vin"
-                            className="form-select">
+                            className="form-select"
+                            >
                             <option value="">Choose a Automobile</option>
-                            {automobiles && automobiles.map((autos, idx) => {
-                                if (autos.vin in sales) {
-                                    return (
-                                        <option key={idx} value={autos.vin}>
-                                            {autos.vin}
-                                        </option>
-                                    );
-                                }
-
-                            })}
+                            {filteredAutos
+                                .map((auto, idx) => (
+                                <option key={idx} value={auto.vin}>
+                                    {auto.vin}
+                                </option>
+                                ))
+                            }
                         </select>
                         </div>
                         <div className="mb-3">
