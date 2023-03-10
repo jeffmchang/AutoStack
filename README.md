@@ -294,7 +294,9 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 }
 ```
 </details>
+
 ---
+
 ### Sales APIs:
 
 | Action | Method | Url |
