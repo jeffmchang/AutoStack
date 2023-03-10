@@ -102,20 +102,19 @@ def list_appointments(request):
             technician = Technician.objects.get(id=content["technician"])
             content["technician"] = technician
 
-            # seeing if they're vip by seeing if their vin is in the inventory (AutomobileVO)
-            try:
-                vip = AutomobileVO.objects.get(vin=content["vin"])
-                if vip:
-                    content["vip"] = True
-            except AutomobileVO.DoesNotExist:
-                content["vip"] = False
-
-        # if the tech doesn't exists
+                # if the tech doesn't exists
         except Technician.DoesNotExist:
             return JsonResponse(
                 {"message": "Invalid technician id"},
                 status=400
             )
+
+        # seeing if they're vip by seeing if their vin is in the inventory (AutomobileVO)
+        try:
+            if AutomobileVO.objects.get(vin=content["vin"]):
+                content["vip"] = True
+        except AutomobileVO.DoesNotExist:
+            content["vip"] = False
 
         # creating the appointment
         appointment = Appointment.objects.create(**content)
