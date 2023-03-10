@@ -139,7 +139,7 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 ### Inventory-POST requests:
 
-**Manufacturer Create**
+**Manufacturer Create Input Example:**
 
 ```jsx
 {
@@ -147,7 +147,17 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 }
 ```
 
-**Vehicle Model Create**
+**Manufacturer Create Output Example:**
+
+```jsx
+{
+"href": "/api/manufacturers/1/",
+"id": 1,
+"name": "Chrysler"
+}
+```
+
+**Vehicle Model Create Input Example:**
 
 ```jsx
 {
@@ -157,7 +167,23 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 }
 ```
 
-**Automobile Create**
+**Vehicle Model Create Output Example:**
+
+```jsx
+{
+  "href": "/api/models/1/",
+  "id": 1,
+  "name": "Sebring",
+  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Chrysler_Sebring_front_20090302.jpg/320px-Chrysler_Sebring_front_20090302.jpg",
+  "manufacturer": {
+    "href": "/api/manufacturers/1/",
+    "id": 1,
+    "name": "Daimler-Chrysler"
+  }
+}
+```
+
+**Automobile Create Input Example:**
 
 ```jsx
 {
@@ -167,6 +193,30 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
   "model_id": 1
 }
 ```
+
+**Automobile Create Output Example:**
+
+```jsx
+{
+  "href": "/api/automobiles/1C3CC5FB2AN120174/",
+  "id": 1,
+  "color": "yellow",
+  "year": 2013,
+  "vin": "1C3CC5FB2AN120174",
+  "model": {
+    "href": "/api/models/1/",
+    "id": 1,
+    "name": "Sebring",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Chrysler_Sebring_front_20090302.jpg/320px-Chrysler_Sebring_front_20090302.jpg",
+    "manufacturer": {
+      "href": "/api/manufacturers/1/",
+      "id": 1,
+      "name": "Daimler-Chrysler"
+    }
+  }
+}
+```
+
 </details>
 
 ---
