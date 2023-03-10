@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 function SalesList() {
 
 // LIST----------------------------------------------------------------
+const [load, setLoading] = useState(false);
+
 const [sales, setSale] = useState([]);
 const fetchData = async () => {
     const saleUrl = `http://localhost:8090/api/sales/`;
@@ -12,12 +14,15 @@ const fetchData = async () => {
     const data = await response.json();
     setSale(data.sales);
     }
+    if (true) {
+        setLoading(!load);
+    }
 };
 
 useEffect(() => {
     fetchData();
 
-}, []);
+}, [load]);
 
 const handleClick = () => {
     window.location.href = '/sales/new'

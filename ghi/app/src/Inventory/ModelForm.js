@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
 function ModelForm(){
+    // loading.....................................................
+    const [load, setLoad] = useState(false);
 
     //drop down............................................
     const [manufacturers, setManufacturers] = useState([]);
@@ -12,6 +14,9 @@ function ModelForm(){
         if (response.ok) {
             const data = await response.json();
             setManufacturers(data.manufacturers);
+        }
+        if (true) {
+            setLoad(!load);
         }
     };
 
@@ -63,7 +68,7 @@ function ModelForm(){
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [load]);
 
     // return.....................................................
     return(

@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 
 function ModelList( ){
+    // loading----------------------------------------------------------------
+    const [load, setLoad] = useState(false);
+
     const[models, setModels] = useState([]);
     const fetchData = async () => {
         const modelUrl = `http://localhost:8100/api/models/`;
@@ -11,11 +14,15 @@ function ModelList( ){
             const data = await response.json();
             setModels(data.models)
         }
+        // loading----------------------------------------------------------------
+        if (true) {
+            setLoad(!load);
+        }
     }
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [load]);
 
     return (
         <div className="my-5 container">

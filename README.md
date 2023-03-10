@@ -114,11 +114,100 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 | Create a Sale | POST | http://localhost:8090/api/sales/ |
 | ————————————————— | ——————— | ————————————————————————— |
 
----
+
 
 <details>
-<summary><h2>SERVICES INSOMNIA</h2></summary>
-### **Technician List  -“GET” Method**
+<summary><h2>INVENTORY GET INSOMNIA</h2></summary>
+
+### Inventory-GET requests:
+
+**Manufacturer list**
+
+```jsx
+{
+  "manufacturers": [
+    {
+      "href": "/api/manufacturers/1/",
+      "id": 1,
+      "name": "Daimler-Chrysler"
+    }
+  ]
+}
+```
+
+**Vehicle Model List**
+
+```jsx
+{
+  "href": "/api/models/1/",
+  "id": 1,
+  "name": "Sebring",
+  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Chrysler_Sebring_front_20090302.jpg/320px-Chrysler_Sebring_front_20090302.jpg",
+  "manufacturer": {
+    "href": "/api/manufacturers/1/",
+    "id": 1,
+    "name": "Daimler-Chrysler"
+  }
+}
+```
+
+**Automobile List**
+
+```jsx
+{
+  "href": "/api/models/1/",
+  "id": 1,
+  "name": "Sebring",
+  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Chrysler_Sebring_front_20090302.jpg/320px-Chrysler_Sebring_front_20090302.jpg",
+  "manufacturer": {
+    "href": "/api/manufacturers/1/",
+    "id": 1,
+    "name": "Daimler-Chrysler"
+  }
+}
+```
+</details>
+<details>
+<summary><h2>INVENTORY POST INSOMNIA</h2></summary>
+
+### Inventory-POST requests:
+
+**Manufacturer Create**
+
+```jsx
+{
+  "name": "Chrysler"
+}
+```
+
+**Vehicle Model Create**
+
+```jsx
+{
+  "name": "Sebring",
+  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Chrysler_Sebring_front_20090302.jpg/320px-Chrysler_Sebring_front_20090302.jpg",
+  "manufacturer_id": 1
+}
+```
+
+**Automobile Create**
+
+```jsx
+{
+  "color": "red",
+  "year": 2012,
+  "vin": "1C3CC5FB2AN120174",
+  "model_id": 1
+}
+```
+</details>
+
+<details>
+<summary><h2>SERVICES GET INSOMNIA</h2></summary>
+
+### Services— **GET requests:**
+
+**Technician List**
 
 ```jsx
 {
@@ -133,29 +222,9 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 }
 ```
 
-### **Create or update a technician-”POST” & “PUT”**
+ ****
 
-Example Input:
-
-```jsx
-{
-	"name": "Melissa",
-	"employee_number": 11
-}
-```
-
-Example output:
-
-```jsx
-{
-	"href": "/api/technician/11/",
-	"name": "Melissa",
-	"employee_number": 11,
-	"id": 11
-}
-```
-
-### **Service Appointment List- “GET” Method**
+**Service List**
 
 ```jsx
 {
@@ -176,13 +245,35 @@ Example output:
 			"finished": true,
 			"id": 2
 		},
-    ]
+```
+
+</details>
+<details>
+<summary><h2>SERVICES POST INSOMNIA</h2></summary>
+
+### Services— **POST requests:**
+
+**Technician Creation Example Input:**
+
+```jsx
+{
+	"name": "Melissa",
+	"employee_number": 11
 }
 ```
 
-### **Creating and updating service appointment—”POST” & “PUT”**
+**Technician Creation Example output:**
 
-Example input:
+```jsx
+{
+	"href": "/api/technician/11/",
+	"name": "Melissa",
+	"employee_number": 11,
+	"id": 11
+}
+```
+
+**Service Appointment Creation Example input:**
 
 ```jsx
 {
@@ -196,7 +287,7 @@ Example input:
 }
 ```
 
-Example output:
+**Service Appointment Creation Example output:**
 
 ```jsx
 {
@@ -217,15 +308,12 @@ Example output:
 }
 ```
 </details>
-
-
 <details>
-<summary><h2>SALES INSOMNIA</h2></summary>
+<summary><h2>SALES POST INSOMNIA</h2></summary>
 
 ### Sales — POST requests:
 
-> *New Sales Record input*
->
+**New Sales Record input**
 
 ```python
 {
@@ -236,8 +324,7 @@ Example output:
 }
 ```
 
-> *New Sales Record response*
->
+**New Sales Record response**
 
 ```python
 {
@@ -250,9 +337,9 @@ Example output:
 }
 ```
 
+---
 
-> *New Customer input*
->
+**New Customer input**
 
 ```python
 {
@@ -262,8 +349,7 @@ Example output:
 }
 ```
 
-> *New Customer response*
->
+**New Customer response**
 
 ```python
 {
@@ -276,10 +362,9 @@ Example output:
 }
 ```
 
+---
 
-
-> *New Salesperson input*
->
+**New Salesperson input**
 
 ```python
 {
@@ -288,8 +373,7 @@ Example output:
 }
 ```
 
-> *New Salesperson response*
->
+**New Salesperson response**
 
 ```python
 {
@@ -300,61 +384,61 @@ Example output:
 
 ---
 
+</details>
+<details>
+<summary><h2>SALES GET INSOMNIA</h2></summary>
+
 ### Sales — GET requests:
 
-> *All Sales return*
->
+**All Sales return**
 
 ```python
 {
-    "sales": [
-        {
-            "salesperson": "Jimmy John",
-            "customer": "Joey Tribbiani",
-            "vin": "AKSJDHF0101278389",
-            "sale_price": 400001,
-            "id": 24,
-            "employee_number": 1
-        },
-        {
-            "salesperson": "Wang Junior",
-            "customer": "Jake Seer",
-            "vin": "5YJ3E1EA5LF807996",
-            "sale_price": 400001,
-            "id": 25,
-            "employee_number": 2
-        }
-    ]
+	"sales": [
+		{
+			"salesperson": "Jimmy John",
+			"customer": "Joey Tribbiani",
+			"vin": "AKSJDHF0101278389",
+			"sale_price": 400001,
+			"id": 24,
+			"employee_number": 1
+		},
+		{
+			"salesperson": "Wang Junior",
+			"customer": "Jake Seer",
+			"vin": "5YJ3E1EA5LF807996",
+			"sale_price": 400001,
+			"id": 25,
+			"employee_number": 2
+		}
+  ]
 }
 ```
 
-> *Specific Salespeople return*
->
+**Specific Salespeople return**
 
- ```python
+```python
 [
- 	{
- 		"salesperson": "Sal Callord",
- 		"customer": "Jeff Chong",
- 		"vin": "A98SDHF908YH928H3",
- 		"sale_price": 213122,
- 		"id": 28,
- 		"employee_number": 4123
- 	},
- 	{
- 		"salesperson": "Sal Callord",
- 		"customer": "Jeff Chong",
- 		"vin": "OJASD98FJH283YH9H",
- 		"sale_price": 4123,
- 		"id": 29,
- 		"employee_number": 4123
- 	}
+	{
+		"salesperson": "Sal Callord",
+		"customer": "Jeff Chong",
+		"vin": "A98SDHF908YH928H3",
+		"sale_price": 213122,
+		"id": 28,
+		"employee_number": 4123
+	},
+	{
+		"salesperson": "Sal Callord",
+		"customer": "Jeff Chong",
+		"vin": "OJASD98FJH283YH9H",
+		"sale_price": 4123,
+		"id": 29,
+		"employee_number": 4123
+	}
 ]
 ```
 
-
->*All Salespeople return*
->
+**All Salespeople return**
 
 ```python
 {
@@ -378,9 +462,9 @@ Example output:
 }
 ```
 
+---
 
-> *All Customers*
->
+**All Customers**
 
 ```python
 [
@@ -399,8 +483,5 @@ Example output:
 ]
 ```
 
+
 </details>
-
-
-
----

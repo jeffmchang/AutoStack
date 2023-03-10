@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function ManuForm() {
     // field-------------------------------------------------
@@ -7,6 +7,8 @@ function ManuForm() {
         const value = event.target.value;
         setManufacturer(value);
     }
+
+
 
     // submit------------------------------------------------
     const handleSubmit = async (event) => {
