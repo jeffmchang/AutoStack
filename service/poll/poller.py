@@ -18,7 +18,6 @@ def get_vin():
         AutomobileVO.objects.update_or_create(
             vin = automobile["vin"],
             defaults={
-                "vin": automobile["vin"],
                 "id": automobile["id"],
             }
         )
@@ -30,7 +29,7 @@ def poll():
             print('Service poller polling for data')
         except Exception as e:
             print(e, file=sys.stderr)
-        time.sleep(60)
+        time.sleep(10)
 
 
 if __name__ == "__main__":

@@ -20,6 +20,9 @@ function ModelList( ){
     return (
         <div className="my-5 container">
             <h1 className="text-dark fw-bold text-center my-3">Vehicle Models</h1>
+                <p className="text-center">
+                <Link to="/models/new" className="btn btn-primary btn-md" >Create A New Model</Link>
+                </p>
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -35,14 +38,13 @@ function ModelList( ){
                             <td>{ model.name }</td>
                             <td>{ model.manufacturer.name }</td>
                             <td>
-                                <img src= { model.picture_url } />
+                                <img style={{ width: 300, height: 300 }} src= { model.picture_url } />
                             </td>
                         </tr>
                     );
                 })}
                 </tbody>
             </table>
-            <Link to="/models/new" className="btn btn-primary btn-md" >Create</Link>
         </div>
     );
 }

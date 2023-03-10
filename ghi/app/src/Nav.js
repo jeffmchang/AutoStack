@@ -41,6 +41,17 @@ function Nav() {
               </ul>
             </div>
 
+           {/* Services------------------------------------------------------- */}
+           <div className="dropdown">
+              <Link className="nav-link text-white dropdown-toggle" to="technicians" type="button" data-bs-toggle="dropdown" aria-expanded="false">Services</Link>
+              <ul className="dropdown-menu">
+                <li><Link className="dropdown-item" to="appointments/new">Create A New Service Appointment</Link></li>
+                <li><Link className="dropdown-item" to="appointments/">Service Appointment List</Link></li>
+                <li><Link className="dropdown-item" to="appointments/history">Service Appointment History</Link></li>
+                <li><Link className="dropdown-item" to="technicians/new">Create A New Technician</Link></li>
+              </ul>
+            </div>
+
             {/* Sales------------------------------------------------------- */}
             <div className="dropdown">
               <Link className="nav-link text-white dropdown-toggle" to="automobiles" type="button" data-bs-toggle="dropdown" aria-expanded="false">Sales</Link>
@@ -52,18 +63,6 @@ function Nav() {
                 <li><Link className="dropdown-item" to="sales">All Sales</Link></li>
               </ul>
             </div>
-
-            {/* Services------------------------------------------------------- */}
-            <div className="dropdown">
-              <Link className="nav-link text-white dropdown-toggle" to="technicians" type="button" data-bs-toggle="dropdown" aria-expanded="false">Services</Link>
-              <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to="appointments/new">Create A New Service Appointment</Link></li>
-                <li><Link className="dropdown-item" to="appointments/">Service Appointment List</Link></li>
-                <li><Link className="dropdown-item" to="appointments/history">Service Appointment History</Link></li>
-                <li><Link className="dropdown-item" to="technicians/new">Create A New Technician</Link></li>
-              </ul>
-            </div>
-
           </ul>
         </div>
       </div>
