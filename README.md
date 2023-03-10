@@ -1,5 +1,7 @@
 # CarCar
 
+The project is CarCar, an application for managing aspects of an automobile dealership, specifically its inventory, service center, and sales.
+
 Team:
 
 * Sofia Uribe - Service Microservice
