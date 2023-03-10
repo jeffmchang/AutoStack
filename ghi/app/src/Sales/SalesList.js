@@ -52,8 +52,9 @@ function SalesList() {
             })}
             </tbody>
         </table>
-        <button
-            onClick={handleClick} className="btn btn-primary">Create a Sale</button>
+        <div className="text-center">
+        <button onClick={handleClick} className="btn btn-primary">Create a Sale</button>
+        </div>
         </div>
     );
 }

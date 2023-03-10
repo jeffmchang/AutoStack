@@ -49,7 +49,7 @@ function TechnicianForm(){
         <div className="row">
         <div className="offset-3 col-6">
           <div className="shadow p-4 mt-4">
-            <h1>Create A New Technician</h1>
+            <h1 className="text-center">Create A New Technician</h1>
             <form onSubmit={handleSubmit} id="create-model-form">
 
               {/* name.......................................... */}
@@ -79,10 +79,10 @@ function TechnicianForm(){
                 />
                 <label htmlFor="employee_number">Employee Number</label>
               </div>
-              <p> </p>
               <p>  </p>
-              <h6>This will direct you to create a service appointment</h6>
-              <button className="btn btn-primary">Create</button>
+              <div className="text-center">
+                <button className="btn btn-primary">Create</button>
+              </div>
             </form>
           </div>
         </div>

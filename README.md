@@ -44,14 +44,14 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 <details>
     <summary><h2>Inventory</h2></summary>
-    Our inventory will contain three different types of models to use as databases: Automobile, VehicleModel, and Manufacturer. Automobile will serve as the core database for our VO (value object) models in both Sales and Service. It will provide VIN, color, year, and model information. VehicleModel will include the model name and a picture URL, as well as the manufacturer (which is pulled from the Manufacturer database). Manufacturer will have a standalone attribute for just the name, which is a straightforward property to supply our VehicleModel. The purpose of this inventory is to gather and organize information into our respective microservices. By doing so, we can ensure that all databases are kept up to speed when presenting information on the webpage.
+   The purpose of this inventory is to gather and organize information we can later use in our respective microservices. Our inventory includes three different types of models: Automobile, VehicleModel, and Manufacturer. Automobile will serve as the core database for our VO (value object) models in both Sales and Service. It will provide VIN, color, year, and model information. VehicleModel will include the model name and a picture URL, as well as the manufacturer (which is pulled from the Manufacturer database). Manufacturer will have a standalone attribute for just the name, which is a straightforward property to supply our VehicleModel.
 
 </details>
 
 
 <details>
     <summary><h2>Service</h2></summary>
-    The service microservice keeps track of service appointments for automobiles and their owners. More specifically, it enables customers to schedule service appointments, view appointment details, and review appointment history once an appointment is marked as "finished". The service history page includes a search function, allowing customers to easily find their vehicle by its VIN. This microservice polls the VIN data from the Inventory through a value object (named AutomobileVO here) to check if the vehicle qualifies for “VIP treatment”. Our dealership offers VIP treatment to customers who have purchased a vehicle from us. The customer can also create a technician. This is visible when creating a new service appointment, as you select a technician in the form. By utilizing states in the components, the database always contains the most up-to-date information for the objects; for example, when they are created, deleted, or updated.
+    The service microservice keeps track of service appointments for automobiles and their owners. More specifically, it allows a user to schedule service appointments, view appointment details, and review appointment history once an appointment is marked as "finished". The service history page includes a search function, allowing the user to easily find a vehicle by its VIN. This microservice polls the VIN data from the Inventory through a value object (named AutomobileVO here) to check if the vehicle qualifies for “VIP treatment”. Our dealership offers VIP treatment to customers who have purchased a vehicle from us. The user can also create a technician. This is visible when creating a new service appointment, as you select a technician in the form. By utilizing states in the components, the database always contains the most up-to-date information for the objects; for example, when they are created, deleted, or updated.
 </details>
 
 
@@ -86,7 +86,7 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 | ————————————————— | ——————— | ————————————————————————— |
 
 <details>
-<summary><h2>Inventory GET Requests</h2></summary>
+<summary><h2>Inventory "GET" Requests</h2></summary>
 
 
 **Manufacturer list**
@@ -136,7 +136,7 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 ```
 </details>
 <details>
-<summary><h2>Inventory POST Requests</h2></summary>
+<summary><h2>Inventory "POST" Requests</h2></summary>
 
 
 **Manufacturer Create Input Example:**
@@ -239,7 +239,7 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 | Delete an appointment | DELETE | ```http://localhost:8080/api/appointments/<:id>/``` |
 | ————————————————— | ——————— | ————————————————————————— |
 <details>
-<summary><h2>Services GET Requests</h2></summary>
+<summary><h2>Services "GET" Requests</h2></summary>
 
 
 **Technician List**
@@ -286,7 +286,7 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 </details>
 <details>
-<summary><h2>Services POST Requests</h2></summary>
+<summary><h2>Services "POST" Requests</h2></summary>
 
 
 **Technician Creation Example Input:**
@@ -364,7 +364,7 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 
 <details>
-<summary><h2>Sales POST Requests</h2></summary>
+<summary><h2>Sales "POST" Requests</h2></summary>
 
 **New Sales Record input**
 
@@ -439,7 +439,7 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 </details>
 <details>
-<summary><h2>Sales GET Requests</h2></summary>
+<summary><h2>Sales "GET" Requests</h2></summary>
 
 
 **All Sales return**
