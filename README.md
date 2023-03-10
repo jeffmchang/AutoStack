@@ -176,7 +176,7 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 | Action | Method | Url |
 | --- | --- | --- |
-| List technicians | GET | http://localhost:8080/api/technicians/ |
+| List technicians | GET | ```http://localhost:8080/api/technicians/``` |
 | Details of a technician | GET | http://localhost:8080/api/technicians/<:id>/ |
 | Create a technician | POST | http://localhost:8080/api/technicians/ |
 | Update a technician | PUT | http://localhost:8080/api/technicians/<:id>/ |
