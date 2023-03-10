@@ -86,7 +86,6 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 <details>
 <summary><h2>Inventory GET Requests</h2></summary>
 
-### Inventory-GET requests:
 
 **Manufacturer list**
 
@@ -137,7 +136,6 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 <details>
 <summary><h2>Inventory POST Requests</h2></summary>
 
-### Inventory-POST requests:
 
 **Manufacturer Create Input Example:**
 
@@ -241,7 +239,6 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 <details>
 <summary><h2>Services GET Requests</h2></summary>
 
-### Services— **GET requests:**
 
 **Technician List**
 
@@ -289,7 +286,6 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 <details>
 <summary><h2>Services POST Requests</h2></summary>
 
-### Services— **POST requests:**
 
 **Technician Creation Example Input:**
 
@@ -368,8 +364,6 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 <details>
 <summary><h2>Sales POST Requests</h2></summary>
 
-### Sales — POST requests:
-
 **New Sales Record input**
 
 ```python
@@ -445,7 +439,6 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 <details>
 <summary><h2>Sales GET Requests</h2></summary>
 
-### Sales — GET requests:
 
 **All Sales return**
 
