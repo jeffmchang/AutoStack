@@ -33,6 +33,7 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 ---
 ![My image](excalidraw.png)
+
 ---
 
 
@@ -167,6 +168,7 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 }
 ```
 </details>
+
 ---
 
 
