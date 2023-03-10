@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function ManuForm() {
+    const navigate = useNavigate();
     // field-------------------------------------------------
     const [manufacturer, setManufacturer] = useState('');
     const handleManufacturerChange = (event) => {
@@ -29,6 +31,7 @@ function ManuForm() {
 
         if (response.ok) {
             setManufacturer('');
+            navigate('/manufacturers/');
         }
     }
 

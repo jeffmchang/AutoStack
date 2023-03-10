@@ -35,7 +35,7 @@ class AppointmentEncoder(ModelEncoder):
         "id"
     ]
     encoders = {
-        "technician": TechnicianEncoder()
+        "technician": TechnicianEncoder(),
     }
 
 # LIST OF TECHS AND CREATING A TECH.............................................
