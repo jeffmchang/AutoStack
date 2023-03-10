@@ -90,7 +90,7 @@ function AutoForm() {
                         </div>
                         <div className="form-floating mb-3">
                             <input
-                                maxLength={4}
+                                maxLength="4"
                                 value={year}
                                 onChange={handleYearChange}
                                 placeholder="Year"
