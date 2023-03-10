@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 function AutoForm() {
-
+    const navigate = useNavigate();
     // fields-----------------------------------------
     const [color, setColor] = useState('');
     const handleColorChange = (event) => {
@@ -62,6 +63,7 @@ function AutoForm() {
             setYear('');
             setVin('');
             setModelId('');
+            navigate('/automobiles/');
         }
     }
     useEffect(() => {
@@ -88,6 +90,7 @@ function AutoForm() {
                         </div>
                         <div className="form-floating mb-3">
                             <input
+                                maxLength={4}
                                 value={year}
                                 onChange={handleYearChange}
                                 placeholder="Year"

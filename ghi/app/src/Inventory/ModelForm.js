@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
+
 
 function ModelForm(){
-
+  const navigate = useNavigate();
     //drop down............................................
     const [manufacturers, setManufacturers] = useState([]);
     const fetchData = async () => {
@@ -58,6 +60,7 @@ function ModelForm(){
             setName('');
             setPictureUrl('');
             setManufacturerId('');
+            navigate('/models/');
         }
     };
 
