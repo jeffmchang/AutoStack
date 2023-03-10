@@ -177,16 +177,16 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 | Action | Method | Url |
 | --- | --- | --- |
 | List technicians | GET | ```http://localhost:8080/api/technicians/``` |
-| Details of a technician | GET | http://localhost:8080/api/technicians/<:id>/ |
-| Create a technician | POST | http://localhost:8080/api/technicians/ |
-| Update a technician | PUT | http://localhost:8080/api/technicians/<:id>/ |
-| Delete a technician | DELETE | http://localhost:8080/api/technicians/<:id>/ |
+| Details of a technician | GET | ```http://localhost:8080/api/technicians/<:id>/``` |
+| Create a technician | POST | ```http://localhost:8080/api/technicians/``` |
+| Update a technician | PUT | ```http://localhost:8080/api/technicians/<:id>/``` |
+| Delete a technician | DELETE | ```http://localhost:8080/api/technicians/<:id>/``` |
 | ————————————————— | ——————— | ————————————————————————— |
-| List Appointments | GET | http://localhost:8080/api/appointments/ |
-| Details of an appointment | GET | http://localhost:8080/api/appointments/<:id>/ |
-| Create an appointment | POST | http://localhost:8080/api/appointments/ |
-| Update an appointment | PUT | http://localhost:8080/api/appointments/<:id>/ |
-| Delete an appointment | DELETE | http://localhost:8080/api/appointments/<:id>/ |
+| List Appointments | GET | ```http://localhost:8080/api/appointments/``` |
+| Details of an appointment | GET | ```http://localhost:8080/api/appointments/<:id>/``` |
+| Create an appointment | POST | ```http://localhost:8080/api/appointments/``` |
+| Update an appointment | PUT | ```http://localhost:8080/api/appointments/<:id>/``` |
+| Delete an appointment | DELETE | ```http://localhost:8080/api/appointments/<:id>/``` |
 | ————————————————— | ——————— | ————————————————————————— |
 <details>
 <summary><h2>Services GET Requests</h2></summary>
