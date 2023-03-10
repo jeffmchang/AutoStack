@@ -51,7 +51,7 @@ function CustomerForm() {
         <div className="row">
             <div className="offset-3 col-6">
                 <div className="shadow p-4 mt-4">
-                    <h1>Create a New Customer</h1>
+                    <h1 className="text-center">Add A New Customer</h1>
                     <form
                         onSubmit={handleSubmit}
                         id="create-manufacturer-form">
@@ -87,8 +87,9 @@ function CustomerForm() {
                                 className="form-control" />
                             <label htmlFor="phone_number">Phone Number</label>
                         </div>
-                        <button
-                            className="btn btn-primary">Create</button>
+                        <div className="text-center">
+                            <button className="btn btn-primary">Create</button>
+                        </div>
                     </form>
                 </div>
             </div>

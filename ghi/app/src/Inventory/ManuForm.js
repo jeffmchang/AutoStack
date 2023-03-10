@@ -50,8 +50,9 @@ function ManuForm() {
                                 className="form-control" />
                             <label htmlFor="manufacturer">Manufacturer</label>
                         </div>
-                        <button
-                            className="btn btn-primary">Create</button>
+                        <div className="text-center">
+                            <button className="btn btn-primary">Create</button>
+                        </div>
                     </form>
                 </div>
             </div>
