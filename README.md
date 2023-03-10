@@ -64,23 +64,23 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 | Action | Method | Url |
 | --- | --- | --- |
-| List manufacturers | GET | http://localhost:8100/api/manufacturers/ |
-| Details of a manufacturer | GET | http://localhost:8100/api/manufacturers/<:id>/ |
-| Create a manufacturer | POST | http://localhost:8100/api/manufacturers/ |
-| Update a manufacturer | PUT | http://localhost:8100/api/manufacturers/<:id>/ |
-| Delete a manufacturer | DELETE | http://localhost:8100/api/manufacturers/<:id>/ |
+| List manufacturers | GET | ```http://localhost:8100/api/manufacturers/``` |
+| Details of a manufacturer | GET | ```http://localhost:8100/api/manufacturers/<:id>/``` |
+| Create a manufacturer | POST | ```http://localhost:8100/api/manufacturers/``` |
+| Update a manufacturer | PUT | ```http://localhost:8100/api/manufacturers/<:id>/``` |
+| Delete a manufacturer | DELETE | ```http://localhost:8100/api/manufacturers/<:id>/``` |
 | ————————————————— | ——————— | ————————————————————————— |
-| List Automobiles | GET | http://localhost:8080/api/automobiles/ |
-| Details of an Automobile | GET | http://localhost:8080/api/automobiles/<:vin>/ |
-| Create an Automobile | POST | http://localhost:8080/api/automobiles/ |
-| Update an Automobile | PUT | http://localhost:8080/api/automobiles/<:vin>/ |
-| Delete an Automobile | DELETE | http://localhost:8080/api/automobiles/<:vin>/ |
+| List Automobiles | GET | ```http://localhost:8080/api/automobiles/``` |
+| Details of an Automobile | GET | ```http://localhost:8080/api/automobiles/<:vin>/``` |
+| Create an Automobile | POST | ```http://localhost:8080/api/automobiles/``` |
+| Update an Automobile | PUT | ```http://localhost:8080/api/automobiles/<:vin>/``` |
+| Delete an Automobile | DELETE | ```http://localhost:8080/api/automobiles/<:vin>/``` |
 | ————————————————— | ——————— | ————————————————————————— |
-| List Models | GET | http://localhost:8080/api/models/ |
-| Details of an Model | GET | http://localhost:8080/api/models/<:id>/ |
-| Create a Model | POST | http://localhost:8080/api/models/ |
-| Update a Model | PUT | http://localhost:8080/api/models/<:id>/ |
-| Delete a Model | DELETE | http://localhost:8080/api/models/<:id>/ |
+| List Models | GET | ```http://localhost:8080/api/models/``` |
+| Details of an Model | GET | ```http://localhost:8080/api/models/<:id>/``` |
+| Create a Model | POST | ```http://localhost:8080/api/models/``` |
+| Update a Model | PUT | ```http://localhost:8080/api/models/<:id>/``` |
+| Delete a Model | DELETE | ```http://localhost:8080/api/models/<:id>/``` |
 | ————————————————— | ——————— | ————————————————————————— |
 
 <details>
@@ -303,15 +303,15 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 | Action | Method | Url |
 | --- | --- | --- |
-| List Salespeople | GET | http://localhost:8090/api/salespeople/ |
-| Create a Salesperson | POST | http://localhost:8090/api/salespeople/ |
+| List Salespeople | GET | ```http://localhost:8090/api/salespeople/``` |
+| Create a Salesperson | POST | ```http://localhost:8090/api/salespeople/``` |
 | ————————————————— | ——————— | ————————————————————————— |
-| List Customer | GET | http://localhost:8090/api/customers/ |
-| Create an Customer | POST | http://localhost:8090/api/customers/ |
+| List Customer | GET | ```http://localhost:8090/api/customers/``` |
+| Create an Customer | POST | ```http://localhost:8090/api/customers/``` |
 | ————————————————— | ——————— | ————————————————————————— |
-| List All Sales | GET | http://localhost:8090/api/sales/ |
-| Salesperson History | GET | http://localhost:8090/api/salesperson/<:id>/sales |
-| Create a Sale | POST | http://localhost:8090/api/sales/ |
+| List All Sales | GET | ```http://localhost:8090/api/sales/``` |
+| Salesperson History | GET | ```http://localhost:8090/api/salesperson/<:id>/sales``` |
+| Create a Sale | POST | ```http://localhost:8090/api/sales/``` |
 | ————————————————— | ——————— | ————————————————————————— |
 
 
