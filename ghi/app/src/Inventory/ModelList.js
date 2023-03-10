@@ -38,7 +38,7 @@ function ModelList( ){
                             <td>{ model.name }</td>
                             <td>{ model.manufacturer.name }</td>
                             <td>
-                                <img style={{ width: 300, height: 300 }} src= { model.picture_url } />
+                                <img className='img-thumbnail' style={{ width: 300, height: "auto" }} src= { model.picture_url } />
                             </td>
                         </tr>
                     );
