@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
 function AutoList() {
-    // loading----------------------------------------------------------------
-    const [load, setLoad] = useState(false);
 
     const [autos, setAutos] = useState([]);
     const fetchData = async () => {
@@ -14,14 +12,11 @@ function AutoList() {
             const data = await response.json();
             setAutos(data.autos);
         }
-        if (true) {
-            setLoad(!load);
-        }
     }
 
     useEffect(() => {
         fetchData();
-    }, [load]);
+    }, []);
 
     return (
         <div className="container">

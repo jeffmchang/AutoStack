@@ -4,8 +4,7 @@ import React, {useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 
 function AppointmentList( ){
-    // loading.....................................................
-    const [load, setLoad] = useState(false);
+
     // fetch appointments & only show if property finished =false
     const[appointments, setAppointments] = useState([]);
     const fetchAppointments = async () => {
@@ -15,14 +14,11 @@ function AppointmentList( ){
             const finishedAppointments = data.appointments.filter((appointment) => !appointment.finished);
             setAppointments(finishedAppointments);
         }
-        if (true) {
-            setLoad(!load);
-        }
     };
 
     useEffect(() => {
         fetchAppointments();
-    }, [load]);
+    }, []);
 
     //delete
     const deleteAppointment = async (event) => {

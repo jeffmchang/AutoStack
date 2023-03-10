@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 function ManuList() {
     const [manufacturers, setManufacturers] = useState([]);
-    const [load, setLoad] = useState(false);
-
     const fetchData = async () => {
         const listUrl = `http://localhost:8100/api/manufacturers/`;
         const response = await fetch(listUrl);
@@ -14,14 +12,11 @@ function ManuList() {
             const data = await response.json();
             setManufacturers(data.manufacturers);
         }
-        if (true) {
-            setLoad(!load);
-        }
     }
 
     useEffect(() => {
         fetchData();
-    }, [load]);
+    }, []);
 
     return (
         <div className="container">

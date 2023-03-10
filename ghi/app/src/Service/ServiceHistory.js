@@ -3,9 +3,6 @@
 import React, {useState, useEffect} from 'react';
 
 function ServiceHistory( ){
-    // loading.....................................................
-    const [load, setLoad] = useState(false);
-
     // fetch appointments & only show if property finished =false
     const[appointments, setAppointments] = useState([]);
     const fetchAppointments = async () => {
@@ -15,14 +12,11 @@ function ServiceHistory( ){
             const finishedAppointments = data.appointments.filter((appointment) => appointment.finished);
             setAppointments(finishedAppointments);
         }
-        if (true) {
-            setLoad(!load);
-        }
     };
 
     useEffect(() => {
         fetchAppointments();
-    }, [load]);
+    }, []);
 
     //for search
     const[search, setSearch] = useState('');

@@ -82,42 +82,8 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 | Delete a Model | DELETE | http://localhost:8080/api/models/<:id>/ |
 | ————————————————— | ——————— | ————————————————————————— |
 
-### Service APIs:
-
-| Action | Method | Url |
-| --- | --- | --- |
-| List technicians | GET | http://localhost:8080/api/technicians/ |
-| Details of a technician | GET | http://localhost:8080/api/technicians/<:id>/ |
-| Create a technician | POST | http://localhost:8080/api/technicians/ |
-| Update a technician | PUT | http://localhost:8080/api/technicians/<:id>/ |
-| Delete a technician | DELETE | http://localhost:8080/api/technicians/<:id>/ |
-| ————————————————— | ——————— | ————————————————————————— |
-| List Appointments | GET | http://localhost:8080/api/appointments/ |
-| Details of an appointment | GET | http://localhost:8080/api/appointments/<:id>/ |
-| Create an appointment | POST | http://localhost:8080/api/appointments/ |
-| Update an appointment | PUT | http://localhost:8080/api/appointments/<:id>/ |
-| Delete an appointment | DELETE | http://localhost:8080/api/appointments/<:id>/ |
-| ————————————————— | ——————— | ————————————————————————— |
-
-### Sales APIs:
-
-| Action | Method | Url |
-| --- | --- | --- |
-| List Salespeople | GET | http://localhost:8090/api/salespeople/ |
-| Create a Salesperson | POST | http://localhost:8090/api/salespeople/ |
-| ————————————————— | ——————— | ————————————————————————— |
-| List Customer | GET | http://localhost:8090/api/customers/ |
-| Create an Customer | POST | http://localhost:8090/api/customers/ |
-| ————————————————— | ——————— | ————————————————————————— |
-| List All Sales | GET | http://localhost:8090/api/sales/ |
-| Salesperson History | GET | http://localhost:8090/api/salesperson/<:id>/sales |
-| Create a Sale | POST | http://localhost:8090/api/sales/ |
-| ————————————————— | ——————— | ————————————————————————— |
-
-
-
 <details>
-<summary><h2>INVENTORY GET INSOMNIA</h2></summary>
+<summary><h2>Inventory GET Requests</h2></summary>
 
 ### Inventory-GET requests:
 
@@ -168,7 +134,7 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 ```
 </details>
 <details>
-<summary><h2>INVENTORY POST INSOMNIA</h2></summary>
+<summary><h2>Inventory POST Requests</h2></summary>
 
 ### Inventory-POST requests:
 
@@ -201,9 +167,27 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 }
 ```
 </details>
+---
 
+
+### Service APIs:
+
+| Action | Method | Url |
+| --- | --- | --- |
+| List technicians | GET | http://localhost:8080/api/technicians/ |
+| Details of a technician | GET | http://localhost:8080/api/technicians/<:id>/ |
+| Create a technician | POST | http://localhost:8080/api/technicians/ |
+| Update a technician | PUT | http://localhost:8080/api/technicians/<:id>/ |
+| Delete a technician | DELETE | http://localhost:8080/api/technicians/<:id>/ |
+| ————————————————— | ——————— | ————————————————————————— |
+| List Appointments | GET | http://localhost:8080/api/appointments/ |
+| Details of an appointment | GET | http://localhost:8080/api/appointments/<:id>/ |
+| Create an appointment | POST | http://localhost:8080/api/appointments/ |
+| Update an appointment | PUT | http://localhost:8080/api/appointments/<:id>/ |
+| Delete an appointment | DELETE | http://localhost:8080/api/appointments/<:id>/ |
+| ————————————————— | ——————— | ————————————————————————— |
 <details>
-<summary><h2>SERVICES GET INSOMNIA</h2></summary>
+<summary><h2>Services GET Requests</h2></summary>
 
 ### Services— **GET requests:**
 
@@ -245,11 +229,13 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 			"finished": true,
 			"id": 2
 		},
+    ]
+}
 ```
 
 </details>
 <details>
-<summary><h2>SERVICES POST INSOMNIA</h2></summary>
+<summary><h2>Services POST Requests</h2></summary>
 
 ### Services— **POST requests:**
 
@@ -308,8 +294,25 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 }
 ```
 </details>
+---
+### Sales APIs:
+
+| Action | Method | Url |
+| --- | --- | --- |
+| List Salespeople | GET | http://localhost:8090/api/salespeople/ |
+| Create a Salesperson | POST | http://localhost:8090/api/salespeople/ |
+| ————————————————— | ——————— | ————————————————————————— |
+| List Customer | GET | http://localhost:8090/api/customers/ |
+| Create an Customer | POST | http://localhost:8090/api/customers/ |
+| ————————————————— | ——————— | ————————————————————————— |
+| List All Sales | GET | http://localhost:8090/api/sales/ |
+| Salesperson History | GET | http://localhost:8090/api/salesperson/<:id>/sales |
+| Create a Sale | POST | http://localhost:8090/api/sales/ |
+| ————————————————— | ——————— | ————————————————————————— |
+
+
 <details>
-<summary><h2>SALES POST INSOMNIA</h2></summary>
+<summary><h2>Sales POST Requests</h2></summary>
 
 ### Sales — POST requests:
 
@@ -386,7 +389,7 @@ Once everything loads, you can make your way to http://localhost:3000/ to check 
 
 </details>
 <details>
-<summary><h2>SALES GET INSOMNIA</h2></summary>
+<summary><h2>Sales GET Requests</h2></summary>
 
 ### Sales — GET requests:
 
