@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function ManuForm() {
     // field-------------------------------------------------
@@ -8,11 +8,12 @@ function ManuForm() {
         setManufacturer(value);
     }
 
+
+
     // submit------------------------------------------------
     const handleSubmit = async (event) => {
         event.preventDefault();
         const data = {};
-        console.log(data)
         data.name = manufacturer;
 
         const manuUrl = 'http://localhost:8100/api/manufacturers/';

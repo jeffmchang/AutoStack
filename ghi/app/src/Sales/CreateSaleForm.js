@@ -31,6 +31,9 @@ function CreateSaleForm() {
         const data = await response.json();
         setAutomobiles(data.autos);
         }
+        if (true) {
+            setLoad(!load);
+        }
     };
 
     useEffect(() => {

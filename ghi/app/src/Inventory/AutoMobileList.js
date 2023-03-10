@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 function AutoList() {
+
     const [autos, setAutos] = useState([]);
     const fetchData = async () => {
         const autoUrl = `http://localhost:8100/api/automobiles/`;
