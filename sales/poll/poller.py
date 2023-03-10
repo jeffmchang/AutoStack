@@ -34,7 +34,7 @@ def poll():
             print('Sales poller polling for data')
         except Exception as e:
             print(e, file=sys.stderr)
-        time.sleep(45)
+        time.sleep(5)
 
 
 if __name__ == "__main__":
