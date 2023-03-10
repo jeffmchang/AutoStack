@@ -20,7 +20,10 @@ function ManuList() {
 
     return (
         <div className="container">
-            <h1 className="card display-5 text-dark fw-bold text-center my-3">MANUFACTURERS</h1>
+            <h1 className="text-dark fw-bold text-center my-3">Manufacturers</h1>
+                <p className="text-center">
+                <Link to="/manufacturers/new" className="btn btn-primary btn-md" >Create A New Manufacturer</Link>
+                </p>
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -35,7 +38,6 @@ function ManuList() {
                             </tr>
                         );
                     })}
-                    <tr><th><Link to="/manufacturers/new" className="btn btn-primary btn-md" >Create</Link></th></tr>
                 </tbody>
             </table>
         </div>
