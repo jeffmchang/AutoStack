@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function TechnicianForm(){
+
+    const navigate = useNavigate();
 
     const [name, setName] = useState('');
     const handleNameChange = (event) => {
@@ -37,6 +40,7 @@ function TechnicianForm(){
         if (response.ok) {
             setName('');
             setEmployeeNumber('');
+            navigate('/appointments/new/');
         }
     };
 
@@ -75,6 +79,9 @@ function TechnicianForm(){
                 />
                 <label htmlFor="employee_number">Employee Number</label>
               </div>
+              <p> </p>
+              <p>  </p>
+              <h6>This will direct you to create a service appointment</h6>
               <button className="btn btn-primary">Create</button>
             </form>
           </div>
