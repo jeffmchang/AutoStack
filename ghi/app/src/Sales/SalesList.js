@@ -24,7 +24,7 @@ function SalesList() {
 
     return (
         <div className="container">
-        <h1 className="card display-5 text-dark fw-bold text-center my-3">
+        <h1 className="text-dark fw-bold text-center my-3">
             ALL SALES HISTORY
         </h1>
 
