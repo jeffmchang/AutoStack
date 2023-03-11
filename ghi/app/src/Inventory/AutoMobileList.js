@@ -21,9 +21,9 @@ function AutoList() {
 
     return (
         <div className="container">
-            <h1 className="card display-5 text-dark fw-bold text-center my-3">Automobiles</h1>
+            <h1 className="text-dark fw-bold text-center my-3">Automobiles</h1>
             <p className="text-center">
-                <Link to="/automobiles/new" className="btn btn-primary btn-md" >Create A New Automobile</Link>
+                <Link to="/automobiles/new" className="btn btn-secondary btn-md" >Create A New Automobile</Link>
                 </p>
             <table className="table table-striped">
                 <thead>

@@ -54,7 +54,7 @@ function ManuForm() {
                             <label htmlFor="manufacturer">Manufacturer</label>
                         </div>
                         <div className="text-center">
-                            <button className="btn btn-primary">Create</button>
+                            <button className="btn btn-secondary">Create</button>
                         </div>
                     </form>
                 </div>

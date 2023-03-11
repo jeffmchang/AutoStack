@@ -1,9 +1,9 @@
 import { NavLink, Link } from 'react-router-dom';
-import image from './Thank.png';
+import image from './white.png';
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-info">
+    <nav className="navbar navbar-expand-lg navbar-light bg-secondary">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/"><img src={image}/></NavLink>
 

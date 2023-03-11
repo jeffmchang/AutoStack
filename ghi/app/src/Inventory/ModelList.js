@@ -21,7 +21,7 @@ function ModelList( ){
         <div className="my-5 container">
             <h1 className="text-dark fw-bold text-center my-3">Vehicle Models</h1>
                 <p className="text-center">
-                <Link to="/models/new" className="btn btn-primary btn-md" >Create A New Model</Link>
+                <Link to="/models/new" className="btn btn-secondary btn-md" >Create A New Model</Link>
                 </p>
             <table className="table table-striped">
                 <thead>
