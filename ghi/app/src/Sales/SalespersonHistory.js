@@ -42,7 +42,7 @@ useEffect(() => {
 return (
     <div className="container">
     <h1 className="text-dark fw-bold text-center my-3">
-        SALESPERSON HISTORY
+        Salesperson History
     </h1>
     <div className="mb-3">
         <select
