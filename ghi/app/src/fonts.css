@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Roboto+Slab&display=swap');
 
 
 #mainpage {
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 1.25em;
 }
 
@@ -14,8 +14,8 @@ nav {
 }
 
 html, #root {
-    background-image: url("https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
-    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1678398270271-2a5515c16648?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80");
+    background-size: fill;
     background-repeat: no-repeat;
     background-position: top;
 }
@@ -26,4 +26,8 @@ html, #root {
     width: 100%;
     margin: 0 auto;
     padding: 0 0 0 0;
+}
+
+form, #formDiv {
+    background-color: white;
 }
