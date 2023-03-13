@@ -86,7 +86,7 @@ function AppointmentList( ){
                             <td>{ new Date(appointment.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) }</td>
                             <td>{ appointment.reason }</td>
                             <td>{ appointment.technician.name }</td>
-                            <td>{appointment.vip ? "Yes" : "No" } </td>
+                            <td>{appointment.vip ? "👑" : "❌" } </td>
                             <td>
                                 <button type="button" onClick={() => handleFinished(appointment)} className="btn btn-success">Finished</button>
                                 <p> </p>
