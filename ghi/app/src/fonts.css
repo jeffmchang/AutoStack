@@ -30,4 +30,8 @@ html, #root {
 
 form, #formDiv {
     background-color: white;
+    margin: 15px auto;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    border-radius: 10px;
 }

@@ -23,7 +23,7 @@ function SalesList() {
     }
 
     return (
-        <div className="container">
+        <div className="container" id="formDiv">
         <h1 className="text-dark fw-bold text-center my-3">
             ALL SALES HISTORY
         </h1>
