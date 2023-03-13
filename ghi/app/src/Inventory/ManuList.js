@@ -19,7 +19,7 @@ function ManuList() {
     }, []);
 
     return (
-        <div className="container">
+        <div className="container" id="formDiv">
             <h1 className="text-dark fw-bold text-center my-3">Manufacturers</h1>
                 <p className="text-center">
                 <Link to="/manufacturers/new" className="btn btn-secondary btn-md" >Create A New Manufacturer</Link>
