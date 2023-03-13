@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '/app/src/css/button.css'
 
 function SalesPersonForm() {
     // field-------------------------------------------------
@@ -44,7 +45,7 @@ function SalesPersonForm() {
         <div className="row">
             <div className="offset-3 col-6">
                 <div className="shadow p-4 mt-4">
-                    <h1>Create a New Salesperson</h1>
+                    <h1 className="text-center">Create a New Salesperson</h1>
                     <form
                         onSubmit={handleSubmit}
                         id="create-salesperson-form">
@@ -70,7 +71,13 @@ function SalesPersonForm() {
                             <label htmlFor="employeeId">Employee ID#</label>
                         </div>
                         <div className="text-center">
-                            <button className="btn btn-primary">Create</button>
+                        <button class="cta">
+                            <span>Create</span>
+                            <svg viewBox="0 0 13 10" height="10px" width="15px">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        </button>
                         </div>
                     </form>
                 </div>

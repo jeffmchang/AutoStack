@@ -1,7 +1,6 @@
-//needs to have cancel and finished buttons (move them to service history list)
-
 import React, {useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
+import '/app/src/css/button.css'
 
 function AppointmentList( ){
 
@@ -88,9 +87,22 @@ function AppointmentList( ){
                             <td>{ appointment.technician.name }</td>
                             <td>{appointment.vip ? "👑" : "❌" } </td>
                             <td>
-                                <button type="button" onClick={() => handleFinished(appointment)} className="btn btn-success">Finished</button>
+                                <button className="custom-button" onClick={() => deleteAppointment(appointment)}>
+                                    <span className="text">Delete</span>
+                                    <span className="icon">
+                                        <svg viewBox="0 0 24 24">
+                                        <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+                                        </svg>
+                                    </span>
+                                </button>
                                 <p> </p>
-                                <button className='btn btn-danger' onClick={() => deleteAppointment(appointment)} type="button">Cancel</button>
+                                <button className="shadow__btn" onClick={() => handleFinished(appointment)}>
+                                    Finished
+                                </button>
+
+
+
+                                {/* <button className='btn btn-success'onClick={() => handleFinished(appointment)} type="button">Finish</button> */}
                             </td>
                         </tr>
                     );

@@ -1,0 +1,146 @@
+/* finished button */
+.shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+  }
+
+  .shadow__btn {
+    background:  rgb(50, 136, 44);
+    box-shadow: 0 0 20px  rgb(50, 136, 44);
+  }
+
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px rgb(50, 136, 44),
+                0 0 15px rgb(50, 136, 44),
+                0 0 25px rgb(50, 136, 44),
+                0 0 60px rgb(50, 136, 44);
+  }
+
+
+/* delete button */
+  .custom-button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+    transition: 200ms;
+  }
+
+  .custom-button .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+    transition: 200ms;
+  }
+
+  .custom-button .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms;
+  }
+
+  .custom-button svg {
+    width: 15px;
+    fill: #eee;
+  }
+
+  .custom-button:hover {
+    background: #ff3636;
+  }
+
+  .custom-button:hover .text {
+    color: transparent;
+  }
+
+  .custom-button:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+  }
+
+  .custom-button:focus {
+    outline: none;
+  }
+
+  .custom-button:active .icon svg {
+    transform: scale(0.8);
+  }
+
+
+ /* create button */
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+   }
+
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+   }
+
+   .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+   }
+
+   .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+
+   .cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+   }
+
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+
+   .cta:active {
+    transform: scale(0.95);
+   }
