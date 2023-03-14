@@ -21,9 +21,14 @@ function ModelList( ){
         <div className="my-5 container" id="formDiv">
             <h1 className="text-dark fw-bold text-center my-3">Vehicle Models</h1>
                 <p className="text-center">
+                <h5
+                className="text-center my-3">
+                All of our current models are here!
+                </h5>
+                <p></p>
                 <Link to="/models/new" className="btn createOnList border full-rounded" >Create A New Model</Link>
                 </p>
-            <table className="table table-striped">
+            <table className="table">
                 <thead>
                     <tr>
                         <th>Vehicle Model Name</th>

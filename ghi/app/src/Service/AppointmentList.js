@@ -60,11 +60,11 @@ function AppointmentList( ){
                 <br />
                 <br />
                 <p>
-                <Link to="/appointments/new" className="btn createOnList border full-rounded" >Create An Appointment</Link>
+                <Link to="/appointments/new" className="btn createOnList border full-rounded" >Schedule a new appointment</Link>
                 </p>
             </h5>
-            <table className="table table-striped">
-                <thead>
+            <table className="table">
+                <thead className="thead-dark">
                     <tr>
                         <th>Vin</th>
                         <th>Customer</th>

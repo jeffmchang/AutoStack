@@ -21,11 +21,16 @@ function ManuList() {
     return (
         <div className="container" id="formDiv">
             <h1 className="text-dark fw-bold text-center my-3">Manufacturers</h1>
-                <p className="text-center">
+            <h5
+                className="text-center my-3">
+                These are all of our current manufacturers!
+            </h5>
+            <p></p>
+            <p className="text-center">
                 <Link to="/manufacturers/new" className="btn createOnList border full-rounded" >Create A New Manufacturer</Link>
-                </p>
-            <table className="table table-striped">
-                <thead>
+            </p>
+            <table className="table">
+                <thead className="thead-dark">
                     <tr>
                         <th>Manufacturers</th>
                     </tr>

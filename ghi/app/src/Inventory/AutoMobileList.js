@@ -24,10 +24,15 @@ function AutoList() {
     return (
         <div className="container" id="formDiv">
             <h1 className="text-dark fw-bold text-center my-3">Automobiles</h1>
+            <h5
+                className="text-center my-3">
+                All of our current in stock vehicles are here!
+            </h5>
+            <p></p>
             <p className="text-center">
                 <Link to="/automobiles/new" className="btn createOnList border full-rounded" >Create A New Automobile</Link>
             </p>
-            <table className="table table-striped">
+            <table className="table">
                 <thead>
                     <tr>
                         <th>VIN</th>
