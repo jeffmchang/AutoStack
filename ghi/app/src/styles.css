@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Montserrat+Alternates:wght@500&family=Roboto+Slab&display=swap');
 
 
 html, body, #root {
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+#revsuccess {
+    font-family: 'Antonio', sans-serif;
+    font-size: 8em;
 }
 
 #mainpage {
@@ -55,4 +61,9 @@ form, #formDiv {
 #footerColor {
     background-color: white;
     width: 100vw;
+}
+
+#divCard {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
 }
