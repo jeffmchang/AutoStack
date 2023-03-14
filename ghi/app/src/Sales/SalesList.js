@@ -25,9 +25,13 @@ function SalesList() {
     return (
         <div className="container" id="formDiv">
         <h1 className="text-dark fw-bold text-center my-3">
-            ALL SALES HISTORY
+            All Sales History
         </h1>
-
+        <p></p>
+        <div className="text-center">
+        <button onClick={handleClick} className="btn createOnList border full-rounded">Create a Sale</button>
+        </div>
+        <p></p>
         <table className="table table-striped">
             <thead>
             <tr>
@@ -52,9 +56,7 @@ function SalesList() {
             })}
             </tbody>
         </table>
-        <div className="text-center">
-        <button onClick={handleClick} className="btn btn-primary">Create a Sale</button>
-        </div>
+
         </div>
     );
 }

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import '/app/src/css/button.css'
+import { useHistory } from "react-router-dom";
 
 function AutoList() {
 
@@ -23,8 +25,8 @@ function AutoList() {
         <div className="container" id="formDiv">
             <h1 className="text-dark fw-bold text-center my-3">Automobiles</h1>
             <p className="text-center">
-                <Link to="/automobiles/new" className="btn btn-secondary btn-md" >Create A New Automobile</Link>
-                </p>
+                <Link to="/automobiles/new" className="btn createOnList border full-rounded" >Create A New Automobile</Link>
+            </p>
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -55,3 +57,10 @@ function AutoList() {
 }
 
 export default AutoList;
+{/* <button className="full-rounded createOnList">
+    <Link to="/automobiles/new" className="btn btn-secondary btn-md" >Create A New Automobile</Link>
+    <span>Create a NewAutomobile</span>
+    <div class="border full-rounded"></div>
+</button> */}
+
+{/* <Link to="/automobiles/new" className="btn btn-secondary btn-md" >Create A New Automobile</Link> */}

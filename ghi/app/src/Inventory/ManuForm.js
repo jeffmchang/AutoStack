@@ -40,7 +40,8 @@ function ManuForm() {
         <div className="row">
             <div className="offset-3 col-6">
                 <div className="shadow p-4 mt-4" id="formDiv">
-                    <h1>Create a New Manufacturer</h1>
+                    <h1 className="text-center">Create a New Manufacturer</h1>
+                    <p></p>
                     <form
                         onSubmit={handleSubmit}
                         id="create-manufacturer-form">
@@ -54,6 +55,7 @@ function ManuForm() {
                                 className="form-control" />
                             <label htmlFor="manufacturer">Manufacturer</label>
                         </div>
+                        <p> </p>
                         <div className="text-center">
                         <button class="cta">
                             <span>Create</span>
