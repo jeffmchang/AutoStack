@@ -43,7 +43,7 @@ function MainContent() {
                     <div className="price">$59.99</div>
                     <div className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
                     </div>
-                    <button>
+                    <button className="buttonBuy">
                         Buy now
                     </button>
                 </div>
@@ -55,7 +55,7 @@ function MainContent() {
                     <div className="price">$324.99</div>
                     <div className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
                     </div>
-                    <button>
+                    <button className="buttonBuy">
                         Buy now
                     </button>
                 </div>
@@ -67,7 +67,7 @@ function MainContent() {
                     <div className="price">$599.99</div>
                     <div className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
                     </div>
-                    <button>
+                    <button className="buttonBuy">
                         Buy now
                     </button>
                 </div>

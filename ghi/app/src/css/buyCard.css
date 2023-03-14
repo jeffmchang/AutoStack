@@ -44,7 +44,7 @@
     letter-spacing: 1px;
 }
 
-button {
+.buttonBuy {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;

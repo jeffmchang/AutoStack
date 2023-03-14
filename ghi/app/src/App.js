@@ -26,7 +26,7 @@ function App() {
       <Nav />
       <div className="container">
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<MainContent />} />
 
           <Route path="manufacturers">
             <Route path="" element={<ManuList />} />
@@ -71,7 +71,7 @@ function App() {
 
         </Routes>
       </div>
-      <MainContent />
+
       <Footer />
     </BrowserRouter>
   );

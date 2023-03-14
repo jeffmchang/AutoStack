@@ -81,7 +81,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 20em;
+    margin: 0 5em;
 }
 
 .card_box2 {
@@ -193,7 +193,7 @@ transform: scale(0.9);
 
 .hrBlock {
     background-color: white;
-    width: 80vw;
+    width: 100vw;
     height: 20px;
 }
 
@@ -201,5 +201,9 @@ transform: scale(0.9);
     font-family: 'Antonio', sans-serif;
     font-size: 7em;
     padding: .02em;
-    margin: .5em 10em .5em 2em;
+    margin: .5em 5em .5em 0;
+}
+
+.spanBurger {
+    color: black;
 }
