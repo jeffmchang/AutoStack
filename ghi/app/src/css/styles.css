@@ -6,13 +6,6 @@ body {
     min-height: 100vh;
 }
 
-#revsuccess {
-    font-family: 'Antonio', sans-serif;
-    font-size: 7em;
-    padding: .02em;
-    margin: 1.25em 10em 2em 2em;
-}
-
 
 .welcomeMain {
     font-family: 'Roboto Slab', serif;
@@ -170,7 +163,15 @@ transform: scale(0.9);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 5em 0;
+    margin: 10em 0 5em 0;
+    padding: 0;
+}
+
+.mainDivContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 0;
     padding: 0;
 }
 
@@ -182,7 +183,23 @@ transform: scale(0.9);
     margin: 2em 0;
 }
 
-hr {
-    border: 10px solid rgb(255, 255, 255);
-    width: 100%;
+.blockContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em 0 2em 0;
+    padding: 0;
+}
+
+.hrBlock {
+    background-color: white;
+    width: 80vw;
+    height: 20px;
+}
+
+#revsuccess {
+    font-family: 'Antonio', sans-serif;
+    font-size: 7em;
+    padding: .02em;
+    margin: .5em 10em .5em 2em;
 }
