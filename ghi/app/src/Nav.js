@@ -1,6 +1,6 @@
 import { NavLink, Link } from 'react-router-dom';
 import image from './Thank.png';
-import './styles.css';
+import './css/styles.css';
 
 function Nav() {
   return (

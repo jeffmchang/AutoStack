@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./css/styles.css";
 import image from "./footer.png";
 
 function Footer() {
