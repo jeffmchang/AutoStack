@@ -40,8 +40,8 @@ useEffect(() => {
 }, [selectedSalesperson]);
 
 return (
-    <div className="container">
-    <h1 className="text-dark fw-bold text-center my-3">
+    <div className="container" id="formDiv">
+    <h1 className="text-dark fw-bold text-center my-3" >
         Salesperson History
     </h1>
     <div className="mb-3">
