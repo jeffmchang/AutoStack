@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Roboto+Slab&display=swap');
 
 
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 #mainpage {
     font-family: 'Roboto Slab', serif;
     font-size: .9em;
@@ -34,4 +40,19 @@ form, #formDiv {
     padding-bottom: 15px;
     padding-top: 5px;
     border-radius: 10px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10em;
+    padding-top: auto;
+
+}
+
+#footerColor {
+    background-color: white;
+    width: 100vw;
 }
