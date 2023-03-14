@@ -74,7 +74,8 @@ function ModelForm(){
         <div className="row">
         <div className="offset-3 col-6">
           <div className="shadow p-4 mt-4" id="formDiv">
-            <h1>Create A New Vehicle Model</h1>
+            <h1 className="text-center">Create A New Vehicle Model</h1>
+            <p></p>
             <form onSubmit={handleSubmit} id="create-model-form">
 
               {/* name.......................................... */}

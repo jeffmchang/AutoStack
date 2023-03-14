@@ -22,7 +22,7 @@ function ManuList() {
         <div className="container" id="formDiv">
             <h1 className="text-dark fw-bold text-center my-3">Manufacturers</h1>
                 <p className="text-center">
-                <Link to="/manufacturers/new" className="btn btn-secondary btn-md" >Create A New Manufacturer</Link>
+                <Link to="/manufacturers/new" className="btn createOnList border full-rounded" >Create A New Manufacturer</Link>
                 </p>
             <table className="table table-striped">
                 <thead>
