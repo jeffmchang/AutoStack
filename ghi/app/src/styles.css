@@ -2,16 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Montserrat+Alternates:wght@500&family=Roboto+Slab&display=swap');
 
-
-html, body, #root {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+body {
+    min-height: 100vh;
 }
 
 #revsuccess {
     font-family: 'Antonio', sans-serif;
-    font-size: 8em;
+    font-size: 7em;
 }
 
 #mainpage {
@@ -25,11 +22,13 @@ nav {
     background-color: white;
 }
 
-html, #root {
+#root, html {
     background-image: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1883&q=80");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 
@@ -48,15 +47,14 @@ form, #formDiv {
     border-radius: 10px;
 }
 
-.footer {
-    position: absolute;
+footer {
+    position: sticky;
+    left: 0;
+    top: 100%;
     bottom: 0;
-    width: 100%;
-    height: 60px;
-    /* margin-bottom: 10em; */
-    padding-top: auto;
-    margin: 0px;
-
+    width: 100vw;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 #footerColor {
