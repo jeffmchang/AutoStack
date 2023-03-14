@@ -1,14 +1,10 @@
-import image from './Thank.png';
+import './css/styles.css';
+import './css/buyCard.css';
 
 function MainPage() {
   return (
     <>
-    <p className="text-center text-white" id='revsuccess'>
-    REV UP YOUR SUCCESS WITH AUTO STACK
-    </p>
-      {/* <h1 className="text-white" >Top of the line sales system</h1> */}
 
-    <div id="divCard"><h1 className="text-white" >-</h1></div>
     </>
   );
 }

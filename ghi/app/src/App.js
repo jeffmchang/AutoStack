@@ -17,6 +17,7 @@ import ServiceList from './Service/ServiceHistory';
 import SalesPersonHistory from './Sales/SalespersonHistory';
 import CreateSaleForm from './Sales/CreateSaleForm';
 import Footer from './footer';
+import MainContent from './MainContent';
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
       <Nav />
       <div className="container">
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<MainContent />} />
 
           <Route path="manufacturers">
             <Route path="" element={<ManuList />} />
@@ -70,6 +71,7 @@ function App() {
 
         </Routes>
       </div>
+
       <Footer />
     </BrowserRouter>
   );
