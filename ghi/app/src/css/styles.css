@@ -10,6 +10,7 @@ body {
     font-family: 'Antonio', sans-serif;
     font-size: 7em;
     padding: .02em;
+    margin: 1.25em 10em 2em 2em;
 }
 
 
@@ -80,25 +81,27 @@ footer {
 
 .block {
     display: block;
+    background-color: white;
 }
 
 .cardContainer {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 20em;
 }
 
 .card_box2 {
     width: 30vw;
     height: 600px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     background: linear-gradient(170deg, rgba(255, 255, 255, 0.808) 0%, rgb(255, 255, 255) 100%);
     position: relative;
     box-shadow: 0 25px 50px rgba(0,0,0,0.55);
     cursor: pointer;
     transition: all .3s;
     margin: 20px;
-    margin-bottom: 2em;
+    margin-bottom: 5em;
 }
 
 .card_box2:hover {
@@ -149,16 +152,37 @@ footer {
 .card_box {
 width: 30vw;
 height: 600px;
-border-radius: 20px;
+/* border-radius: 20px; */
 background: linear-gradient(170deg, rgba(255, 255, 255, 0.808) 0%, rgb(255, 255, 255) 100%);
 position: relative;
 box-shadow: 0 25px 50px rgba(0,0,0,0.55);
 cursor: pointer;
 transition: all .3s;
 margin: 20px;
-margin-bottom: 2em;
+margin-bottom: 5em;
 }
 
 .card_box:hover {
 transform: scale(0.9);
+}
+
+.divContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 5em 0;
+    padding: 0;
+}
+
+.mainImg {
+    width: 40%;
+    height: 100%;
+    padding: 2em 0;
+    padding-left: 3em;
+    margin: 2em 0;
+}
+
+hr {
+    border: 10px solid rgb(255, 255, 255);
+    width: 100%;
 }
