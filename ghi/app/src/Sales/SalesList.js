@@ -32,7 +32,7 @@ function SalesList() {
         <button onClick={handleClick} className="btn createOnList border full-rounded">Create a Sale</button>
         </div>
         <p></p>
-        <table className="table table-striped">
+        <table className="table">
             <thead>
             <tr>
                 <th>Salesperson Name</th>

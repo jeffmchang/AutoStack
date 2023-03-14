@@ -87,7 +87,7 @@
   }
 
 
- /* create button on forms */
+ /* create button */
 .cta {
     position: relative;
     margin: auto;
@@ -162,12 +162,12 @@
    }
 
    .createOnList span {
-    color: #464646;
+    color: #000000;
    }
 
    .createOnList .border {
     position: absolute;
-    border: 0.15em solid #fff;
+    border: 0.15em solid #b1dae7;
     transition: all 0.3s 0.08s linear;
     top: 50%;
     left: 50%;
