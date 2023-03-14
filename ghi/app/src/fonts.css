@@ -4,7 +4,7 @@
 
 #mainpage {
     font-family: 'Roboto Slab', serif;
-    font-size: 1.25em;
+    font-size: .9em;
 }
 
 nav {
@@ -14,8 +14,8 @@ nav {
 }
 
 html, #root {
-    background-image: url("https://images.unsplash.com/photo-1678398270271-2a5515c16648?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80");
-    background-size: fill;
+    background-image: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1883&q=80");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
 }
