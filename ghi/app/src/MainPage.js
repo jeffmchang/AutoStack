@@ -2,14 +2,14 @@ import image from './Thank.png';
 
 function MainPage() {
   return (
-    <div className="px-4 py-5 my-5 text-center" id="mainpageDiv">
-      <img src={image}/>
-      <div className="col-lg-6 mx-auto">
-        <p className="lead mb-4" id="mainpage">
-        Rev up your dealership's success with Auto Stack - the premier inventory and sales management solution for car dealerships.
-        </p>
-      </div>
-    </div>
+    <>
+    <p className="text-center text-white" id='revsuccess'>
+    REV UP YOUR SUCCESS WITH AUTO STACK
+    </p>
+      {/* <h1 className="text-white" >Top of the line sales system</h1> */}
+
+    <div id="divCard"><h1 className="text-white" >-</h1></div>
+    </>
   );
 }
 
