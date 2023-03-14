@@ -3,8 +3,8 @@ import image from "./footer.png";
 
 function Footer() {
     return (
-    <div className="container footer">
-    <footer className="row row-cols-5 py-1 border-top" id="footerColor">
+
+    <footer className="row row-cols-5 py-1 px-3 mx-0 border-top" id="footerColor">
         <div className="col">
         <a to="/" className="d-flex align-items-center mb-1 mt-3 mx-1 link-dark text-decoration-none">
             <img src={image}/>
@@ -43,7 +43,7 @@ function Footer() {
         </ul>
         </div>
     </footer>
-    </div>
+
 
     );
 }
