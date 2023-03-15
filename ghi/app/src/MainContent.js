@@ -20,11 +20,7 @@ window.onload = () => {
 
 function MainContent() {
 
-    const [key, setKey] = useState(0);
-
-    const refreshHiddenElements = () => {
-        setKey((prevKey) => prevKey + 1);
-    };
+    const [key] = useState(0);
 
     // The useEffect hook is used to initialize the IntersectionObserver and observe the hidden elements
     React.useEffect(() => {
