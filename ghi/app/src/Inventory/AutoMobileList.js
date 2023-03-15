@@ -23,7 +23,7 @@ function AutoList() {
 
     return (
         <div className="container" id="formDiv">
-            <h1 className="text-dark fw-bold text-center my-3">Automobiles</h1>
+            <h1 className="text-dark text-center my-3">Automobiles</h1>
             <h5
                 className="text-center my-3">
                 All of our current in stock vehicles are here!

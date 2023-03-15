@@ -1,10 +1,63 @@
-import React, {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
 import '/app/src/css/button.css'
 
-function TechnicianForm(){
 
-    const navigate = useNavigate();
+function TechnicianFormContainer() {
+  return (
+    <div className="row">
+      <div className="col-md-6">
+        <TechnicianForm />
+      </div>
+      <div className="col-md-6">
+        <TechnicianList />
+      </div>
+    </div>
+  );
+}
+
+function TechnicianList(){
+  const [technicians, setTechnicians] = useState([]);
+  const fetchTechnicians = async () => {
+    const technicianUrl = 'http://localhost:8080/api/technicians/'
+    const response = await fetch(technicianUrl)
+
+    if (response.ok){
+      const data = await response.json();
+      setTechnicians(data.technicians)
+    }
+  }
+
+  useEffect(() => {
+    fetchTechnicians();
+}, [technicians]);
+
+  return (
+    <div className="container" id="formDiv">
+      <h1 className="text-dark text-center my-3">Technicians</h1>
+      <table className="table">
+          <thead className="thead-dark">
+              <tr>
+                  <th>Technicians</th>
+                  <th>Employee #</th>
+              </tr>
+          </thead>
+          <tbody>
+              {technicians.map((technician, id) => {
+                  return (
+                      <tr key={id}>
+                          <td>{technician.name}</td>
+                          <td>{technician.employee_number}</td>
+                      </tr>
+                  );
+              })}
+          </tbody>
+      </table>
+  </div>
+  )
+}
+
+// tech form.....................................................
+function TechnicianForm(){
 
     const [name, setName] = useState('');
     const handleNameChange = (event) => {
@@ -27,7 +80,7 @@ function TechnicianForm(){
         data.employee_number = employeeNumber;
 
 
-        const modelUrl = 'http://localhost:8080/api/technicians/';
+        const techUrl = 'http://localhost:8080/api/technicians/';
         const fetchConfig = {
             method: 'post',
             body: JSON.stringify(data),
@@ -36,12 +89,11 @@ function TechnicianForm(){
             }
         };
 
-        const response = await fetch(modelUrl, fetchConfig);
+        const response = await fetch(techUrl, fetchConfig);
 
         if (response.ok) {
             setName('');
             setEmployeeNumber('');
-            navigate('/appointments/new/');
         }
     };
 
@@ -50,7 +102,7 @@ function TechnicianForm(){
         <div className="row">
         <div className="offset-3 col-6">
           <div className="shadow p-4 mt-4" id="formDiv">
-            <h1 className="text-center">Create A New Technician</h1>
+            <h1 className="text-center">Add A New Technician</h1>
             <p></p>
             <form onSubmit={handleSubmit} id="create-model-form">
 
@@ -83,7 +135,7 @@ function TechnicianForm(){
               </div>
               <p>  </p>
               <div className="text-center">
-              <button class="cta">
+              <button className="cta">
                   <span>Create</span>
                   <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
@@ -97,4 +149,4 @@ function TechnicianForm(){
       </div>
     );
 }
-export default TechnicianForm;
+export default TechnicianFormContainer;

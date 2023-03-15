@@ -20,7 +20,7 @@ function ManuList() {
 
     return (
         <div className="container" id="formDiv">
-            <h1 className="text-dark fw-bold text-center my-3">Manufacturers</h1>
+            <h1 className="text-dark text-center my-3">Manufacturers</h1>
             <h5
                 className="text-center my-3">
                 These are all of our current manufacturers!

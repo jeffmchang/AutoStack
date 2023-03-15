@@ -53,7 +53,7 @@ function AppointmentList( ){
 
     return (
         <div className="my-5 container" id="formDiv">
-            <h1 className="text-dark fw-bold text-center my-3">Service Appointments</h1>
+            <h1 className="text-dark text-center my-3">Service Appointments</h1>
             <h5
                 className="text-center my-3">
                 Your appointment will show up here once you create one!
@@ -87,22 +87,13 @@ function AppointmentList( ){
                             <td>{ appointment.technician.name }</td>
                             <td>{appointment.vip ? "👑" : "❌" } </td>
                             <td>
-                                <button className="custom-button" onClick={() => deleteAppointment(appointment)}>
-                                    <span className="text">Delete</span>
-                                    <span className="icon">
-                                        <svg viewBox="0 0 24 24">
-                                        <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
-                                        </svg>
-                                    </span>
+                                <button className="canceled__btn" onClick={() => deleteAppointment(appointment)}>
+                                    Cancel
                                 </button>
                                 <p> </p>
                                 <button className="shadow__btn" onClick={() => handleFinished(appointment)}>
                                     Finished
                                 </button>
-
-
-
-                                {/* <button className='btn btn-success'onClick={() => handleFinished(appointment)} type="button">Finish</button> */}
                             </td>
                         </tr>
                     );

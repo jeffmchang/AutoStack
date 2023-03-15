@@ -24,70 +24,33 @@
                 0 0 60px rgb(50, 136, 44);
   }
 
+  /* canceled button */
+.canceled__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
 
-/* delete button */
-  .custom-button {
-    width: 150px;
-    height: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    background: red;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
-    background: #e62222;
-    transition: 200ms;
-  }
+.canceled__btn {
+  background:  rgb(219, 40, 40);
+  box-shadow: 0 0 20px  rgb(219, 40, 40);
+}
 
-  .custom-button .text {
-    transform: translateX(35px);
-    color: white;
-    font-weight: bold;
-    transition: 200ms;
-  }
+.canceled__btn:hover {
+  box-shadow: 0 0 5px rgb(219, 40, 40),
+              0 0 15px rgb(219, 40, 40),
+              0 0 25px rgb(219, 40, 40),
+              0 0 60px rgb(219, 40, 40);
+}
 
-  .custom-button .icon {
-    position: absolute;
-    border-left: 1px solid #c41b1b;
-    transform: translateX(110px);
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 200ms;
-  }
-
-  .custom-button svg {
-    width: 15px;
-    fill: #eee;
-  }
-
-  .custom-button:hover {
-    background: #ff3636;
-  }
-
-  .custom-button:hover .text {
-    color: transparent;
-  }
-
-  .custom-button:hover .icon {
-    width: 150px;
-    border-left: none;
-    transform: translateX(0);
-  }
-
-  .custom-button:focus {
-    outline: none;
-  }
-
-  .custom-button:active .icon svg {
-    transform: scale(0.8);
-  }
-
-
- /* create button */
+ /* create button................................. */
 .cta {
     position: relative;
     margin: auto;
@@ -145,7 +108,8 @@
     transform: scale(0.95);
    }
 
-   /* create button on lists */
+
+   /* create button on lists................................. */
    .createOnList {
     font-size: 16px;
     position: relative;
