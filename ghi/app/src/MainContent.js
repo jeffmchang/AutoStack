@@ -1,22 +1,37 @@
 import './css/styles.css';
 import './css/buyCard.css';
 import './css/infoCard.css'
+import React, { useState } from 'react';
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
         }
     });
 });
 
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((element) => observer.observe(element));
+
+window.onload = () => {
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((element) => observer.observe(element));
+}
 
 
 function MainContent() {
+
+    const [key, setKey] = useState(0);
+
+    const refreshHiddenElements = () => {
+        setKey((prevKey) => prevKey + 1);
+    };
+
+    // The useEffect hook is used to initialize the IntersectionObserver and observe the hidden elements
+    React.useEffect(() => {
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((element) => observer.observe(element));
+    }, [key]);
+
     return (
         <>
         <div>
@@ -49,7 +64,7 @@ function MainContent() {
                     <div className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
                     </div>
                     <button className="buttonBuy">
-                        Buy now
+                    Learn More
                     </button>
                 </div>
             </div>
@@ -61,7 +76,7 @@ function MainContent() {
                     <div className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
                     </div>
                     <button className="buttonBuy">
-                        Buy now
+                        Learn More
                     </button>
                 </div>
             </div>
@@ -73,7 +88,7 @@ function MainContent() {
                     <div className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
                     </div>
                     <button className="buttonBuy">
-                        Buy now
+                    Learn More
                     </button>
                 </div>
             </div>

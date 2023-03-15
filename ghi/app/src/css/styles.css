@@ -217,9 +217,9 @@ transform: scale(0.9);
 }
 
 .hidden {
-    opacity: 0;
+    opacity: .1;
     filter: blur(5px);
-    transform: translateX(-100%);
+    transform: translateX(-90%);
     transition: all 1.5s;
 }
 
