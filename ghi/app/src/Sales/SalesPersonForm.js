@@ -1,46 +1,48 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect, useRef} from "react";
 import '/app/src/css/button.css'
+import '/app/src/css/shake.css'
+
 
 function SalesPeopleList(){
     const [salespersons, setsalespersons] = useState([]);
     const fetchSalesPeople = async () => {
-      const salesPeopleUrl = 'http://localhost:8090/api/salespeople/'
-      const response = await fetch(salesPeopleUrl)
+    const salesPeopleUrl = 'http://localhost:8090/api/salespeople/'
+    const response = await fetch(salesPeopleUrl)
 
-      if (response.ok){
-        const data = await response.json();
-        setsalespersons(data.salespersons)
-      }
+    if (response.ok){
+    const data = await response.json();
+    setsalespersons(data.salespersons)
     }
+}
 
-    useEffect(() => {
-      fetchSalesPeople();
-  }, [salespersons]);
+useEffect(() => {
+    fetchSalesPeople();
+}, [salespersons]);
 
-    return (
-      <div className="container" id="formDiv">
-        <h1 className="text-dark text-center my-3">Sales People</h1>
-        <table className="table">
-            <thead className="thead-dark">
-                <tr>
-                    <th>Sales People</th>
-                    <th>Employee #</th>
-                </tr>
-            </thead>
-            <tbody>
-                {salespersons.map((person) => {
-                    return (
-                        <tr key={person.id}>
-                            <td>{person.name}</td>
-                            <td>{person.employee_number}</td>
-                        </tr>
-                    );
-                })}
-            </tbody>
-        </table>
-    </div>
-    )
-  }
+return (
+    <div className="container" id="formDiv">
+    <h1 className="text-dark text-center my-3">Sales People</h1>
+    <table className="table">
+        <thead className="thead-dark">
+            <tr>
+                <th>Sales People</th>
+                <th>Employee #</th>
+            </tr>
+        </thead>
+        <tbody>
+            {salespersons.map((person) => {
+                return (
+                    <tr key={person.id}>
+                        <td>{person.name}</td>
+                        <td>{person.employee_number}</td>
+                    </tr>
+                );
+            })}
+        </tbody>
+    </table>
+</div>
+)
+}
 
 function SalesPersonForm() {
     // field-------------------------------------------------
@@ -59,8 +61,8 @@ function SalesPersonForm() {
     // submit------------------------------------------------
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const data = {};
 
+        const data = {};
 
         data.name = name;
         data.employee_number = employee_number;
@@ -84,12 +86,11 @@ function SalesPersonForm() {
 
     return (
         <div className="row">
-            <div className="offset-3 col-6">
+            <div className="offset-3 col-6" id="shakeEl">
                 <div className="shadow p-4 mt-4" id="formDiv">
                     <h1 className="text-center">Add a New Sales Person</h1>
                     <p></p>
                     <form
-
                         onSubmit={handleSubmit}
                         id="create-salesperson-form">
                         <div className="form-floating mb-3">
@@ -108,13 +109,13 @@ function SalesPersonForm() {
                                 onChange={handleEmployeeIdChange}
                                 placeholder="Employee ID#"
                                 maxLength={4}
-                                required type="text"
+                                required type="number"
                                 name='employeeId' id="employeeId"
                                 className="form-control" />
                             <label htmlFor="employeeId">Employee ID#</label>
                         </div>
                         <div className="text-center">
-                        <button className="cta">
+                        <button className="cta" id="button">
                             <span>Create</span>
                             <svg viewBox="0 0 13 10" height="10px" width="15px">
                                 <path d="M1,5 L11,5"></path>
