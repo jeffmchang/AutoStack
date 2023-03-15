@@ -2,75 +2,45 @@ import './css/styles.css';
 import './css/buyCard.css';
 import './css/infoCard.css'
 
+const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((element) => observer.observe(element));
+
+
 function MainContent() {
     return (
         <>
         <div>
-
-            <div className="blockContainer">
-                <p className="hrBlock">
-
-                </p>
-            </div>
-            <div className="mainDivContainer">
-                <p className='text-white' id='revsuccess'>
-                REV UP YOUR SUCCESS WITH AUTO STACK
-                </p>
-            </div>
-            <div className="blockContainer">
-                <p className="hrBlock">
-                </p>
-            </div>
-
-
-            <div className="infoContainer">
-                <div className="cardInfo">
-                    <div className="imageInfo"></div>
-                    <div className="contentInfo">
-                        <a href="#">
-                        <span className="titleInfo">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </span>
-                        </a>
-
-                        <p className="descInfo">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-                        dolores, possimus pariatur animi temporibus nesciunt praesentium
-                        </p>
-
-                        <a href="#" className="actionInfo">
-                        Find out more
-                        <span aria-hidden="true">
-                            →
-                        </span>
-                        </a>
-                    </div>
-                    </div>
-                <div className="cardInfo">
-                    <div className="imageInfo"></div>
-                    <div className="contentInfo">
-                        <a href="#">
-                        <span className="titleInfo">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </span>
-                        </a>
-
-                        <p className="descInfo">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-                        dolores, possimus pariatur animi temporibus nesciunt praesentium
-                        </p>
-
-                        <a href="#" className="actionInfo">
-                        Find out more
-                        <span aria-hidden="true">
-                            →
-                        </span>
-                        </a>
-                    </div>
+            <div className="hidden">
+                <div className="blockContainer">
+                    <p className="hrBlock"></p>
+                </div>
+                <div className="mainDivContainer">
+                    <p className='text-white' id='revsuccess'>
+                    REV UP YOUR SUCCESS WITH AUTO STACK</p>
+                </div>
+                <div className="blockContainer">
+                    <p className="hrBlock"></p>
                 </div>
             </div>
+
+                <div className="hidden">
+                    <p className='text-white text-center' id='revsuccess2'>
+                    Plans and Pricing
+                    </p>
+                </div>
+
         </div>
-        <div className="cardContainer">
+        <div className="cardContainer hidden">
             <div className="card_box">
                 <div className="card">
                     <div className="content">
@@ -84,7 +54,7 @@ function MainContent() {
                 </div>
             </div>
             <div className="card_box2">
-            <div className="card">
+                <div className="card">
                     <div className="content">
                     <div className="title">Business Starter Kit</div>
                     <div className="price">$324.99</div>

@@ -82,6 +82,7 @@ footer {
     align-items: center;
     justify-content: center;
     margin: 0 5em;
+    margin-bottom: 2em;
 }
 
 .card_box2 {
@@ -201,9 +202,29 @@ transform: scale(0.9);
     margin: .5em 7em .5em 0;
 }
 
+#revsuccess2 {
+    font-family: 'Antonio', sans-serif;
+    font-size: 6.5em;
+    margin-top: 1.5em;
+}
+
 .infoContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 5em;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
