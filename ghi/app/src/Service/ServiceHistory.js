@@ -1,5 +1,3 @@
-// needs to have a search feature for vin numbers
-
 import React, {useState, useEffect} from 'react';
 
 function ServiceHistory( ){
@@ -23,7 +21,7 @@ function ServiceHistory( ){
 
     return (
         <div className="my-5 container" id="formDiv">
-                <h1 className="text-dark fw-bold text-center my-3">Service Appointment History</h1>
+                <h1 className="text-dark text-center my-3">Service Appointment History</h1>
                 <h5
                     className="text-center my-3">
                     Need to find your vehicle? Just type in your vehicle's VIN number!
@@ -41,6 +39,7 @@ function ServiceHistory( ){
                 >
                 </input>
             </div>
+            <br></br>
                 <table className="table">
                     <thead>
                         <tr>

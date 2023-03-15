@@ -7,7 +7,7 @@ import ModelList from './Inventory/ModelList';
 import ModelForm from './Inventory/ModelForm';
 import AutoMobileForm from './Inventory/AutoMobileForm';
 import AutoList from './Inventory/AutoMobileList';
-import TechnicianForm from './Service/TechnicianForm';
+import TechnicianFormContainer from './Service/TechnicianForm';
 import SalesPersonForm from './Sales/SalesPersonForm';
 import CustomerForm from './Sales/CustomerForm';
 import SalesList from './Sales/SalesList';
@@ -44,7 +44,7 @@ function App() {
           </Route>
 
           <Route path='technicians'>
-            <Route path="new" element={<TechnicianForm />} />
+            <Route path="new" element={<TechnicianFormContainer />} />
           </Route>
 
           <Route path='appointments'>

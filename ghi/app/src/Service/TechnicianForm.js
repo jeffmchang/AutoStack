@@ -1,6 +1,19 @@
 import React, {useState, useEffect} from 'react';
 import '/app/src/css/button.css'
 
+function TechnicianFormContainer() {
+  return (
+    <div className="row">
+      <div className="col-md-6">
+        <TechnicianForm />
+      </div>
+      <div className="col-md-6">
+        <TechnicianList />
+      </div>
+    </div>
+  );
+}
+
 function TechnicianList(){
   const [technicians, setTechnicians] = useState([]);
   const fetchTechnicians = async () => {
@@ -132,8 +145,7 @@ function TechnicianForm(){
             </form>
           </div>
         </div>
-        <div>{<TechnicianList />}</div>
       </div>
     );
 }
-export default TechnicianForm;
+export default TechnicianFormContainer;

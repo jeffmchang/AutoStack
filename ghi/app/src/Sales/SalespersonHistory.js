@@ -41,7 +41,7 @@ useEffect(() => {
 
 return (
     <div className="container" id="formDiv">
-    <h1 className="text-dark fw-bold text-center my-3" >
+    <h1 className="text-dark text-center my-3" >
         Salesperson History
     </h1>
     <div className="mb-3">

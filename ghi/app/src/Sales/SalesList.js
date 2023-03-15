@@ -24,7 +24,7 @@ function SalesList() {
 
     return (
         <div className="container" id="formDiv">
-        <h1 className="text-dark fw-bold text-center my-3">
+        <h1 className="text-dark text-center my-3">
             All Sales History
         </h1>
         <p></p>
@@ -60,5 +60,4 @@ function SalesList() {
         </div>
     );
 }
-
 export default SalesList;
