@@ -1,5 +1,6 @@
 import './css/styles.css';
 import './css/buyCard.css';
+import './css/infoCard.css'
 
 function MainContent() {
     return (
@@ -22,17 +23,51 @@ function MainContent() {
             </div>
 
 
-            <div>
-                <div className="divContainer block">
-                    <h2 className="text-center mx-3 px-3">Get your services organized with your VIP clients</h2>
-                    <img className="mainImg" src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80" />
-                </div>
-                <div className="divContainer block">
-                    <img className="mainImg" src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1546&q=80" />
-                    <h2 className="text-center mx-3 px-3">Get your sales poppin with this application</h2>
+            <div className="infoContainer">
+                <div className="cardInfo">
+                    <div className="imageInfo"></div>
+                    <div className="contentInfo">
+                        <a href="#">
+                        <span className="titleInfo">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </span>
+                        </a>
 
-                </div>
+                        <p className="descInfo">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+                        dolores, possimus pariatur animi temporibus nesciunt praesentium
+                        </p>
 
+                        <a href="#" className="actionInfo">
+                        Find out more
+                        <span aria-hidden="true">
+                            →
+                        </span>
+                        </a>
+                    </div>
+                    </div>
+                <div className="cardInfo">
+                    <div className="imageInfo"></div>
+                    <div className="contentInfo">
+                        <a href="#">
+                        <span className="titleInfo">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </span>
+                        </a>
+
+                        <p className="descInfo">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+                        dolores, possimus pariatur animi temporibus nesciunt praesentium
+                        </p>
+
+                        <a href="#" className="actionInfo">
+                        Find out more
+                        <span aria-hidden="true">
+                            →
+                        </span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         <div className="cardContainer">
