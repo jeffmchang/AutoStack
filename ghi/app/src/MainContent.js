@@ -3,26 +3,19 @@ import './css/buyCard.css';
 import './css/infoCard.css'
 import React, { useState } from 'react';
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-});
-
-
-window.onload = () => {
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach((element) => observer.observe(element));
-}
-
 
 function MainContent() {
 
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    });
+
     const [key] = useState(0);
 
-    // The useEffect hook is used to initialize the IntersectionObserver and observe the hidden elements
     React.useEffect(() => {
         const hiddenElements = document.querySelectorAll('.hidden');
         hiddenElements.forEach((element) => observer.observe(element));
