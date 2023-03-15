@@ -31,7 +31,7 @@ nav {
     background-image: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1883&q=80");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: bottom;
     background-attachment: fixed;
     min-height: 100vh;
 }
@@ -178,9 +178,6 @@ transform: scale(0.9);
 .mainImg {
     width: 40%;
     height: 100%;
-    padding: 2em 0;
-    padding-left: 3em;
-    margin: 2em 0;
 }
 
 .blockContainer {
@@ -194,16 +191,19 @@ transform: scale(0.9);
 .hrBlock {
     background-color: white;
     width: 100vw;
-    height: 20px;
+    height: 30px;
 }
 
 #revsuccess {
     font-family: 'Antonio', sans-serif;
-    font-size: 7em;
+    font-size: 6.5em;
     padding: .02em;
-    margin: .5em 5em .5em 0;
+    margin: .5em 7em .5em 0;
 }
 
-.spanBurger {
-    color: black;
+.infoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5em;
 }
