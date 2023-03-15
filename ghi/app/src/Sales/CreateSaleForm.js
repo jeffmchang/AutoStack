@@ -187,7 +187,7 @@ function CreateSaleForm() {
                             <label htmlFor="sale_price">Sale Price</label>
                         </div>
                         <div className="text-center">
-                        <button class="cta">
+                        <button className="cta">
                             <span>Create</span>
                             <svg viewBox="0 0 13 10" height="10px" width="15px">
                                 <path d="M1,5 L11,5"></path>
