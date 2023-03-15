@@ -1,5 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import '/app/src/css/button.css'
+
+function SalesPeopleList(){
+    const [salespersons, setsalespersons] = useState([]);
+    const fetchSalesPeople = async () => {
+      const salesPeopleUrl = 'http://localhost:8090/api/salespeople/'
+      const response = await fetch(salesPeopleUrl)
+
+      if (response.ok){
+        const data = await response.json();
+        setsalespersons(data.salespersons)
+      }
+    }
+
+    useEffect(() => {
+      fetchSalesPeople();
+  }, [salespersons]);
+
+    return (
+      <div className="container" id="formDiv">
+        <h1 className="text-dark text-center my-3">Sales People</h1>
+        <table className="table">
+            <thead className="thead-dark">
+                <tr>
+                    <th>Sales People</th>
+                    <th>Employee #</th>
+                </tr>
+            </thead>
+            <tbody>
+                {salespersons.map((person) => {
+                    return (
+                        <tr key={person.id}>
+                            <td>{person.name}</td>
+                            <td>{person.employee_number}</td>
+                        </tr>
+                    );
+                })}
+            </tbody>
+        </table>
+    </div>
+    )
+  }
 
 function SalesPersonForm() {
     // field-------------------------------------------------
@@ -45,7 +86,7 @@ function SalesPersonForm() {
         <div className="row">
             <div className="offset-3 col-6">
                 <div className="shadow p-4 mt-4" id="formDiv">
-                    <h1 className="text-center">Create a New Salesperson</h1>
+                    <h1 className="text-center">Add a New Sales Person</h1>
                     <p></p>
                     <form
 
@@ -73,7 +114,7 @@ function SalesPersonForm() {
                             <label htmlFor="employeeId">Employee ID#</label>
                         </div>
                         <div className="text-center">
-                        <button class="cta">
+                        <button className="cta">
                             <span>Create</span>
                             <svg viewBox="0 0 13 10" height="10px" width="15px">
                                 <path d="M1,5 L11,5"></path>
@@ -84,6 +125,7 @@ function SalesPersonForm() {
                     </form>
                 </div>
             </div>
+            <div>{<SalesPeopleList />}</div>
         </div>
     );
 }
