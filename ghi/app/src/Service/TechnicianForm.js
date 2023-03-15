@@ -1,63 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import '/app/src/css/button.css'
 
-
-function TechnicianFormContainer() {
-  return (
-    <div className="row">
-      <div className="col-md-6">
-        <TechnicianForm />
-      </div>
-      <div className="col-md-6">
-        <TechnicianList />
-      </div>
-    </div>
-  );
-}
-
-function TechnicianList(){
-  const [technicians, setTechnicians] = useState([]);
-  const fetchTechnicians = async () => {
-    const technicianUrl = 'http://localhost:8080/api/technicians/'
-    const response = await fetch(technicianUrl)
-
-    if (response.ok){
-      const data = await response.json();
-      setTechnicians(data.technicians)
-    }
-  }
-
-  useEffect(() => {
-    fetchTechnicians();
-}, [technicians]);
-
-  return (
-    <div className="container" id="formDiv">
-      <h1 className="text-dark text-center my-3">Technicians</h1>
-      <table className="table">
-          <thead className="thead-dark">
-              <tr>
-                  <th>Technicians</th>
-                  <th>Employee #</th>
-              </tr>
-          </thead>
-          <tbody>
-              {technicians.map((technician, id) => {
-                  return (
-                      <tr key={id}>
-                          <td>{technician.name}</td>
-                          <td>{technician.employee_number}</td>
-                      </tr>
-                  );
-              })}
-          </tbody>
-      </table>
-  </div>
-  )
-}
-
 // tech form.....................................................
-function TechnicianForm(){
+function TechnicianForm({fetchTechnicians}){
 
     const [name, setName] = useState('');
     const handleNameChange = (event) => {
@@ -94,6 +39,7 @@ function TechnicianForm(){
         if (response.ok) {
             setName('');
             setEmployeeNumber('');
+            fetchTechnicians();
         }
     };
 
@@ -149,4 +95,4 @@ function TechnicianForm(){
       </div>
     );
 }
-export default TechnicianFormContainer;
+export default TechnicianForm;

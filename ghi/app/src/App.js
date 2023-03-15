@@ -18,6 +18,7 @@ import SalesPersonHistory from './Sales/SalespersonHistory';
 import CreateSaleForm from './Sales/CreateSaleForm';
 import Footer from './footer';
 import MainContent from './MainContent';
+import TechnicianWrapper from './Service/TechWrapper';
 
 
 function App() {
@@ -43,9 +44,7 @@ function App() {
             <Route path="new" element={<AutoMobileForm />} />
           </Route>
 
-          <Route path='technicians'>
-            <Route path="new" element={<TechnicianFormContainer />} />
-          </Route>
+          <Route path="technicians" element={<TechnicianWrapper />} />
 
           <Route path='appointments'>
             <Route path="" element={<AppointmentList />} />
@@ -58,10 +57,8 @@ function App() {
             <Route path="history" element={<SalesPersonHistory />} />
 
           </Route>
-
           <Route path='customers'>
             <Route path="new" element={<CustomerForm />} />
-
           </Route>
 
           <Route path='sales'>

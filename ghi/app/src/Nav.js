@@ -49,7 +49,7 @@ function Nav() {
                 <li><Link className="dropdown-item" id='mainpage' to="appointments/new">Create A New Service Appointment</Link></li>
                 <li><Link className="dropdown-item" id='mainpage'to="appointments/">Service Appointment List</Link></li>
                 <li><Link className="dropdown-item" id='mainpage' to="appointments/history">Service Appointment History</Link></li>
-                <li><Link className="dropdown-item" id='mainpage' to="technicians/new">Add A New Technician</Link></li>
+                <li><Link className="dropdown-item" id='mainpage' to="technicians">Technicians</Link></li>
               </ul>
             </div>
 
