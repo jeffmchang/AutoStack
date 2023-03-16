@@ -1,15 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import Nav from './Nav';
-import ManuWrapper from './Inventory/ManuWrapper'
-// import ManuForm from './Inventory/ManuForm';
-// import ManuList from './Inventory/ManuList';
+import ManuWrapper from './Inventory/Manufacturer/ManuWrapper'
 import ModelList from './Inventory/ModelList';
 import ModelForm from './Inventory/ModelForm';
 import AutoMobileForm from './Inventory/AutoMobileForm';
 import AutoList from './Inventory/AutoMobileList';
-import SalesWrapper from './Sales/SalesWrapper';
-import CustomerForm from './Sales/CustomerForm';
+import SalesWrapper from './Sales/Salesperson/SalesWrapper';
+import CustomerForm from './Sales/Customer/CustomerForm';
 import SalesList from './Sales/SalesList';
 import AppointmentForm from './Service/AppointmentForm';
 import AppointmentList from './Service/AppointmentList';
@@ -18,7 +16,7 @@ import SalesPersonHistory from './Sales/SalespersonHistory';
 import CreateSaleForm from './Sales/CreateSaleForm';
 import Footer from './footer';
 import MainContent from './MainContent';
-import TechnicianWrapper from './Service/TechWrapper';
+import TechnicianWrapper from './Service/Technician/TechWrapper';
 
 
 function App() {
