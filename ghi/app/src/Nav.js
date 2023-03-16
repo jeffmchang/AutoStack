@@ -17,7 +17,7 @@ function Nav() {
 
             {/* manufacturer dropdown.................................................... */}
             <div className="dropdown">
-              <Link className="nav-link text-dark" to="manufacturers" >Manufacturers</Link>
+              <Link className="nav-link text-dark" to="manufacturers">Manufacturers</Link>
             </div>
 
             {/* vehicle models dropdown.................................................... */}
@@ -25,7 +25,7 @@ function Nav() {
               <Link className="nav-link text-dark dropdown-toggle" to="vehicles" type="button" data-bs-toggle="dropdown" aria-expanded="false">Vehicle Models</Link>
               <ul className="dropdown-menu">
                 <li><Link className="dropdown-item" id='mainpage' to="models">List of Vehicle Models</Link></li>
-                <li><Link className="dropdown-item" id='mainpage' to="models/new">Create a Vehicle Model</Link></li>
+                <li><Link className="dropdown-item" id='mainpage' to="models/new">Add a Vehicle Model</Link></li>
               </ul>
             </div>
 
@@ -34,7 +34,7 @@ function Nav() {
               <Link className="nav-link text-dark dropdown-toggle" to="automobiles" type="button" data-bs-toggle="dropdown" aria-expanded="false">Automobiles</Link>
               <ul className="dropdown-menu">
                 <li><Link className="dropdown-item" id='mainpage' to="automobiles">List of Automobiles</Link></li>
-                <li><Link className="dropdown-item" id='mainpage' to="automobiles/new">Create an Automobile</Link></li>
+                <li><Link className="dropdown-item" id='mainpage' to="automobiles/new">Add an Automobile</Link></li>
               </ul>
             </div>
 
@@ -42,10 +42,10 @@ function Nav() {
           <div className="dropdown">
               <Link className="nav-link text-dark dropdown-toggle" to="technicians" type="button" data-bs-toggle="dropdown" aria-expanded="false">Services</Link>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" id='mainpage' to="appointments/new">Create A New Service Appointment</Link></li>
-                <li><Link className="dropdown-item" id='mainpage'to="appointments/">Service Appointment List</Link></li>
+                <li><Link className="dropdown-item" id='mainpage' to="technicians"> Our Technicians</Link></li>
+                <li><Link className="dropdown-item" id='mainpage' to="appointments/new">Schedule A Service Appointment</Link></li>
+                <li><Link className="dropdown-item" id='mainpage'to="appointments/">Service Appointments</Link></li>
                 <li><Link className="dropdown-item" id='mainpage' to="appointments/history">Service Appointment History</Link></li>
-                <li><Link className="dropdown-item" id='mainpage' to="technicians">Technicians</Link></li>
               </ul>
             </div>
 
@@ -53,9 +53,9 @@ function Nav() {
             <div className="dropdown">
               <Link className="nav-link text-dark dropdown-toggle" to="automobiles" type="button" data-bs-toggle="dropdown" aria-expanded="false">Sales</Link>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" id='mainpage' to="sales/new">Record New Sale</Link></li>
-                <li><Link className="dropdown-item" id='mainpage' to="salesperson">Salesperson</Link></li>
                 <li><Link className="dropdown-item" id='mainpage' to="customers/new">Add New Customer</Link></li>
+                <li><Link className="dropdown-item" id='mainpage' to="salesperson">Our Sales People</Link></li>
+                <li><Link className="dropdown-item" id='mainpage' to="sales/new">Record A New Sale</Link></li>
                 <li><Link className="dropdown-item" id='mainpage' to="salesperson/history">Salesperson History</Link></li>
                 <li><Link className="dropdown-item" id='mainpage' to="sales">All Sales</Link></li>
               </ul>

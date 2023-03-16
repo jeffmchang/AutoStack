@@ -24,7 +24,7 @@ function ServiceHistory( ){
                 <h1 className="text-dark text-center my-3">Service Appointment History</h1>
                 <h5
                     className="text-center my-3">
-                    Need to find your vehicle? Just type in your vehicle's VIN number!
+                    Need to find a vehicle? Just type in the vehicle's VIN number!
                 </h5>
                 <i className="bi bi-search"></i>
             <div className="input-group mb-3">

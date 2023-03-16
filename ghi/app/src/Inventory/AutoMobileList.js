@@ -30,7 +30,7 @@ function AutoList() {
             </h5>
             <p></p>
             <p className="text-center">
-                <Link to="/automobiles/new" className="btn createOnList border full-rounded" >Create A New Automobile</Link>
+                <Link to="/automobiles/new" className="btn createOnList border full-rounded" >Add A New Automobile</Link>
             </p>
             <table className="table">
                 <thead>

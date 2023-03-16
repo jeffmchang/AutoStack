@@ -123,7 +123,7 @@ function CreateSaleForm() {
         <div className="row">
             <div className="offset-3 col-6">
                 <div className="shadow p-4 mt-4" id="formDiv">
-                    <h1 className="text-center">Create a new Sale</h1>
+                    <h1 className="text-center">Record A New Sale</h1>
                     <p></p>
                     <form
                         onSubmit={handleSubmit}
@@ -188,7 +188,7 @@ function CreateSaleForm() {
                         </div>
                         <div className="text-center">
                         <button className="cta">
-                            <span>Create</span>
+                            <span>Record</span>
                             <svg viewBox="0 0 13 10" height="10px" width="15px">
                                 <path d="M1,5 L11,5"></path>
                                 <polyline points="8 1 12 5 8 9"></polyline>

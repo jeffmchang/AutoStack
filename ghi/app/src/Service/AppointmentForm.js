@@ -91,7 +91,7 @@ function AppointmentForm(){
         <div className="row">
         <div className="offset-3 col-6">
           <div className="shadow p-4 mt-4" id="formDiv">
-            <h1 className="text-center">Create A Service Appointment</h1>
+            <h1 className="text-center">Schedule A Service Appointment</h1>
             <p></p>
             <form onSubmit={handleSubmit} id="create-model-form">
 
@@ -174,7 +174,7 @@ function AppointmentForm(){
               </div>
               <div className="text-center">
               <button className="cta">
-                  <span>Create</span>
+                  <span>Schedule</span>
                   <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
