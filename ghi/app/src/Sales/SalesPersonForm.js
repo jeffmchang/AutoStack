@@ -2,7 +2,6 @@ import React, { useState} from "react";
 import '/app/src/css/button.css'
 import '/app/src/css/shake.css'
 
-
 function SalesPersonForm({fetchSalesPeople}) {
     // field-------------------------------------------------
     const [name, setSalesName] = useState('');
