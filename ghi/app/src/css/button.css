@@ -1,8 +1,8 @@
 /* finished button */
 .shadow__btn {
-    padding: 10px 20px;
+    padding: 5px 9px;
     border: none;
-    font-size: 17px;
+    font-size: 14px;
     color: #fff;
     border-radius: 7px;
     letter-spacing: 4px;
@@ -14,7 +14,7 @@
 
   .shadow__btn {
     background:  rgb(50, 136, 44);
-    box-shadow: 0 0 20px  rgb(50, 136, 44);
+    box-shadow: 0 0 20px  rgba(50, 136, 44, 0.123);
   }
 
   .shadow__btn:hover {
@@ -26,9 +26,9 @@
 
   /* canceled button */
 .canceled__btn {
-  padding: 10px 20px;
+  padding: 5px 18px;
   border: none;
-  font-size: 17px;
+  font-size: 14px;
   color: #fff;
   border-radius: 7px;
   letter-spacing: 4px;
@@ -40,7 +40,7 @@
 
 .canceled__btn {
   background:  rgb(219, 40, 40);
-  box-shadow: 0 0 20px  rgb(219, 40, 40);
+  box-shadow: 0 0 20px  rgba(219, 40, 40, 0.123);
 }
 
 .canceled__btn:hover {
