@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import '/app/src/css/button.css'
 import SalesPersonForm from './SalesPersonForm'
 import SalesPeopleList from './SalesPeopleList'
-
 
 function SalesWrapper() {
     const [salespersons, setsalespersons] = useState([]);
@@ -31,4 +29,5 @@ function SalesWrapper() {
     </div>
   );
 }
+
 export default SalesWrapper;

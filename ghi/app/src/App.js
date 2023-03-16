@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import Nav from './Nav';
-import ManuForm from './Inventory/ManuForm';
-import ManuList from './Inventory/ManuList';
+import ManuWrapper from './Inventory/ManuWrapper'
+// import ManuForm from './Inventory/ManuForm';
+// import ManuList from './Inventory/ManuList';
 import ModelList from './Inventory/ModelList';
 import ModelForm from './Inventory/ModelForm';
 import AutoMobileForm from './Inventory/AutoMobileForm';
@@ -29,8 +30,7 @@ function App() {
           <Route path="/" element={<MainContent />} />
 
           <Route path="manufacturers">
-            <Route path="" element={<ManuList />} />
-            <Route path="new" element={<ManuForm />} />
+            <Route path="" element={<ManuWrapper />} />
           </Route>
 
           <Route path='models'>
