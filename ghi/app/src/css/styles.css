@@ -229,3 +229,7 @@ transform: scale(0.9);
     filter: blur(0);
     transform: translateX(0);
 }
+
+.listRow {
+    margin-left: 7em;
+}

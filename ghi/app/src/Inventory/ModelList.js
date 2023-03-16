@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 
-function ModelList( ){
+function ModelList(){
     const[models, setModels] = useState([]);
     const fetchData = async () => {
         const modelUrl = `http://localhost:8100/api/models/`;
@@ -30,28 +30,21 @@ function ModelList( ){
                 <p className="text-center">
                 <Link to="/models/new" className="btn createOnList border full-rounded" >Create A New Model</Link>
                 </p>
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th>Vehicle Model Name</th>
-                        <th>Manufacturer</th>
-                        <th>Picture</th>
-                    </tr>
-                </thead>
-                <tbody>
+                <div className="listRow row">
                     {models.map((model, id) => {
-                    return(
-                        <tr key={id}>
-                            <td>{ model.name }</td>
-                            <td>{ model.manufacturer.name }</td>
-                            <td>
-                                <img className='img-thumbnail' style={{ width: 300, height: "auto" }} src= { model.picture_url } />
-                            </td>
-                        </tr>
-                    );
-                })}
-                </tbody>
-            </table>
+
+                        return(
+                                <div key={id} className="${{`col-${12 / 3} mb-3`}} carCard shadow mb-5 bg-body-tertiary rounded">
+                                <img src={ model.picture_url } className='img-thumbnail' style={{ width: 300, height: 175 }}  />
+                                <div className="card-body">
+                                    <h5 className="card-title text-white">{ model.manufacturer.name }</h5>
+                                    <p><small className="text-white">{ model.name }</small></p>
+
+                                </div>
+                                </div>
+                        );
+                    })}
+            </div>
         </div>
     );
 }
