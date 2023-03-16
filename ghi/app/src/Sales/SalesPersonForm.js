@@ -1,50 +1,9 @@
-import React, { useState, useEffect, useRef} from "react";
+import React, { useState} from "react";
 import '/app/src/css/button.css'
 import '/app/src/css/shake.css'
 
 
-function SalesPeopleList(){
-    const [salespersons, setsalespersons] = useState([]);
-    const fetchSalesPeople = async () => {
-    const salesPeopleUrl = 'http://localhost:8090/api/salespeople/'
-    const response = await fetch(salesPeopleUrl)
-
-    if (response.ok){
-    const data = await response.json();
-    setsalespersons(data.salespersons)
-    }
-}
-
-useEffect(() => {
-    fetchSalesPeople();
-}, [salespersons]);
-
-return (
-    <div className="container" id="formDiv">
-    <h1 className="text-dark text-center my-3">Sales People</h1>
-    <table className="table">
-        <thead className="thead-dark">
-            <tr>
-                <th>Sales People</th>
-                <th>Employee #</th>
-            </tr>
-        </thead>
-        <tbody>
-            {salespersons.map((person) => {
-                return (
-                    <tr key={person.id}>
-                        <td>{person.name}</td>
-                        <td>{person.employee_number}</td>
-                    </tr>
-                );
-            })}
-        </tbody>
-    </table>
-</div>
-)
-}
-
-function SalesPersonForm() {
+function SalesPersonForm({fetchSalesPeople}) {
     // field-------------------------------------------------
     const [name, setSalesName] = useState('');
     const handleSalesNameChange = (event) => {
@@ -61,9 +20,7 @@ function SalesPersonForm() {
     // submit------------------------------------------------
     const handleSubmit = async (event) => {
         event.preventDefault();
-
         const data = {};
-
         data.name = name;
         data.employee_number = employee_number;
 
@@ -81,8 +38,9 @@ function SalesPersonForm() {
         if (response.ok) {
             setSalesName('');
             setemployeeId('');
+            fetchSalesPeople();
         }
-    }
+    };
 
     return (
         <div className="row">
@@ -126,7 +84,6 @@ function SalesPersonForm() {
                     </form>
                 </div>
             </div>
-            <div>{<SalesPeopleList />}</div>
         </div>
     );
 }
