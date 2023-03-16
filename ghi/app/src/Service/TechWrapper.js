@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import '/app/src/css/button.css'
-import TechnicianForm from './TechnicianForm'
-import TechnicianList from './TechList'
+import TechnicianForm from './TechnicianForm';
+import TechnicianList from './TechList';
 
 
 function TechnicianWrapper() {

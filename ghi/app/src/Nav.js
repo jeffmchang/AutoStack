@@ -17,11 +17,7 @@ function Nav() {
 
             {/* manufacturer dropdown.................................................... */}
             <div className="dropdown">
-              <Link className="nav-link text-dark dropdown-toggle" to="manufacturers" type="button" data-bs-toggle="dropdown" aria-expanded="false">Manufacturers</Link>
-              <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" id='mainpage' to="manufacturers">List of Manufacturers</Link></li>
-                <li><Link className="dropdown-item" id='mainpage' to="manufacturers/new">Create A Manufacturer</Link></li>
-              </ul>
+              <Link className="nav-link text-dark" to="manufacturers" >Manufacturers</Link>
             </div>
 
             {/* vehicle models dropdown.................................................... */}
@@ -58,7 +54,7 @@ function Nav() {
               <Link className="nav-link text-dark dropdown-toggle" to="automobiles" type="button" data-bs-toggle="dropdown" aria-expanded="false">Sales</Link>
               <ul className="dropdown-menu">
                 <li><Link className="dropdown-item" id='mainpage' to="sales/new">Record New Sale</Link></li>
-                <li><Link className="dropdown-item" id='mainpage' to="salesperson/new">Add New Salesperson</Link></li>
+                <li><Link className="dropdown-item" id='mainpage' to="salesperson">Salesperson</Link></li>
                 <li><Link className="dropdown-item" id='mainpage' to="customers/new">Add New Customer</Link></li>
                 <li><Link className="dropdown-item" id='mainpage' to="salesperson/history">Salesperson History</Link></li>
                 <li><Link className="dropdown-item" id='mainpage' to="sales">All Sales</Link></li>
