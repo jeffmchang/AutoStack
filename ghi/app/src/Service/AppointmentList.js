@@ -73,6 +73,7 @@ function AppointmentList( ){
                         <th>Reason</th>
                         <th>Technician</th>
                         <th>VIP</th>
+                        <th className='px-2'>Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -87,12 +88,12 @@ function AppointmentList( ){
                             <td>{ appointment.technician.name }</td>
                             <td>{appointment.vip ? "👑" : "❌" } </td>
                             <td>
-                                <button className="canceled__btn" onClick={() => deleteAppointment(appointment)}>
-                                    Cancel
-                                </button>
-                                <p> </p>
                                 <button className="shadow__btn" onClick={() => handleFinished(appointment)}>
                                     Finished
+                                </button>
+                                <p> </p>
+                                <button className="canceled__btn" onClick={() => deleteAppointment(appointment)}>
+                                    Cancel
                                 </button>
                             </td>
                         </tr>

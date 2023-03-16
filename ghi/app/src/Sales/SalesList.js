@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 function SalesList() {
+    const navigate = useNavigate();
     // LIST----------------------------------------------------------------
     const [sales, setSale] = useState([]);
     const fetchData = async () => {
@@ -19,7 +21,7 @@ function SalesList() {
     }, []);
 
     const handleClick = () => {
-        window.location.href = '/sales/new'
+        navigate('/sales/new');
     }
 
     return (
