@@ -1,17 +1,13 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import '/app/src/css/button.css'
 
-function ManuForm() {
-    const navigate = useNavigate();
+function ManuForm({fetchManufacturers}) {
     // field-------------------------------------------------
     const [manufacturer, setManufacturer] = useState('');
     const handleManufacturerChange = (event) => {
         const value = event.target.value;
         setManufacturer(value);
     }
-
-
 
     // submit------------------------------------------------
     const handleSubmit = async (event) => {
@@ -32,7 +28,7 @@ function ManuForm() {
 
         if (response.ok) {
             setManufacturer('');
-            navigate('/manufacturers/');
+            fetchManufacturers();
         }
     }
 
