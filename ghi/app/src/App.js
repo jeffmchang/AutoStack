@@ -7,8 +7,7 @@ import ModelList from './Inventory/ModelList';
 import ModelForm from './Inventory/ModelForm';
 import AutoMobileForm from './Inventory/AutoMobileForm';
 import AutoList from './Inventory/AutoMobileList';
-import TechnicianFormContainer from './Service/TechnicianForm';
-import SalesPersonForm from './Sales/SalesPersonForm';
+import SalesWrapper from './Sales/SalesWrapper';
 import CustomerForm from './Sales/CustomerForm';
 import SalesList from './Sales/SalesList';
 import AppointmentForm from './Service/AppointmentForm';
@@ -53,7 +52,7 @@ function App() {
           </Route>
 
           <Route path='salesperson'>
-            <Route path="new" element={<SalesPersonForm />} />
+            <Route path="" element={<SalesWrapper />} />
             <Route path="history" element={<SalesPersonHistory />} />
 
           </Route>
